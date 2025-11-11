@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7915df4cd4da490ab52fc8fa9ee9127, type: 3}
+  m_Name: vInspector Data
+  m_EditorClassIdentifier: 
+  bookmarks:
+  - globalId:
+      globalObjectIdString: GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-1407230822-0
+    _typeString: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    _obj: {fileID: 0}
+    isSceneGameObject: 1
+    isAsset: 0
+    id: 1032827073
+  - globalId:
+      globalObjectIdString: GlobalObjectId_V1-3-0f2638e87eadb024bbe2e7c5091a7f5f-13400000-0
+    _typeString: UnityEngine.PhysicsMaterial, UnityEngine.PhysicsModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    _obj: {fileID: 13400000, guid: 0f2638e87eadb024bbe2e7c5091a7f5f, type: 2}
+    isSceneGameObject: 0
+    isAsset: 1
+    id: 1063380110
+  - globalId:
+      globalObjectIdString: GlobalObjectId_V1-3-d5cacc1e32b988c479696858d2596f21-13400000-0
+    _typeString: UnityEngine.PhysicsMaterial, UnityEngine.PhysicsModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    _obj: {fileID: 13400000, guid: d5cacc1e32b988c479696858d2596f21, type: 2}
+    isSceneGameObject: 0
+    isAsset: 1
+    id: 1058533861
+  - globalId:
+      globalObjectIdString: GlobalObjectId_V1-1-85feec4eb0c475a49877dd9f02bf177f-2167103173282146653-0
+    _typeString: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    _obj: {fileID: 2167103173282146653, guid: 85feec4eb0c475a49877dd9f02bf177f, type: 3}
+    isSceneGameObject: 0
+    isAsset: 1
+    id: 1053135794
+  - globalId:
+      globalObjectIdString: GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-97784301-0
+    _typeString: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    _obj: {fileID: 0}
+    isSceneGameObject: 1
+    isAsset: 0
+    id: 1049390273
