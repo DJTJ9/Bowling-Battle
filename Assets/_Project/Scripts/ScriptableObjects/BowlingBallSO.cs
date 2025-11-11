@@ -6,7 +6,5 @@ public class BowlingBallSO : ScriptableObject
     public GameObject ball;
     public float weight;
     public float pointMultiplier;
+    // Spawn position
 }
-
-public class BowlingBallSelector : MonoBehaviour
-{}

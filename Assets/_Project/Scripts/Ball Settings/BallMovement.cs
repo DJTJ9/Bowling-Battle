@@ -32,6 +32,7 @@ public class BallMovement : MonoBehaviour, IDependencyProvider
         controller = GetComponent<CharacterController>();
         playerInput = GetComponent<PlayerInput>();
         rb = GetComponent<Rigidbody>();
+        playerInput.enabled = true;
     }
 
     void FixedUpdate()
