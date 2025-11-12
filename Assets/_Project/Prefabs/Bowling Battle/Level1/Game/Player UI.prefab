@@ -413,9 +413,9 @@ RectTransform:
   - {fileID: 7144028146190912549}
   m_Father: {fileID: 8778884980133821933}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 180, y: -60}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7607133001044626498
@@ -468,6 +468,7 @@ GameObject:
   - component: {fileID: 3895159825629363803}
   - component: {fileID: 1145412546644475024}
   - component: {fileID: 4167605929143291525}
+  - component: {fileID: 2818564383457707236}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -575,19 +576,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1145412546644475024}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3232325049896024056}
-        m_TargetAssemblyTypeName: BowlingBallSelector, Assembly-CSharp
-        m_MethodName: SetBallPrefab
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 7466876d70fd3e34eb0ca16be7cdfff7, type: 2}
-          m_ObjectArgumentAssemblyTypeName: BowlingBallSO, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &2818564383457707236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856915194869188484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ed3013a1fb64176bf723bfa7ffc7fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballSO: {fileID: 11400000, guid: 7466876d70fd3e34eb0ca16be7cdfff7, type: 2}
 --- !u!1 &937995426399830877
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,6 +757,7 @@ GameObject:
   - component: {fileID: 7458192134215679320}
   - component: {fileID: 6635685583592289378}
   - component: {fileID: 7080502170322664792}
+  - component: {fileID: 8024449728217359765}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -863,6 +866,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8024449728217359765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3285584011762087812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ed3013a1fb64176bf723bfa7ffc7fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballSO: {fileID: 11400000, guid: e228eb49c4270294895924b0a2730803, type: 2}
 --- !u!1 &3443277947238084756
 GameObject:
   m_ObjectHideFlags: 0
@@ -1289,6 +1305,7 @@ GameObject:
   - component: {fileID: 3438874086997353829}
   - component: {fileID: 1935941689582084652}
   - component: {fileID: 5483886330226513828}
+  - component: {fileID: 6700618502044750450}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1396,19 +1413,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1935941689582084652}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3232325049896024056}
-        m_TargetAssemblyTypeName: BowlingBallSelector, Assembly-CSharp
-        m_MethodName: SetBallPrefab
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 7466876d70fd3e34eb0ca16be7cdfff7, type: 2}
-          m_ObjectArgumentAssemblyTypeName: BowlingBallSO, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &6700618502044750450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4326217507385679929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ed3013a1fb64176bf723bfa7ffc7fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballSO: {fileID: 11400000, guid: 61a8b7ab76e1e6941b6341d806094675, type: 2}
 --- !u!1 &6238560034388608953
 GameObject:
   m_ObjectHideFlags: 0
@@ -1445,9 +1463,9 @@ RectTransform:
   - {fileID: 5407119643313555309}
   m_Father: {fileID: 8778884980133821933}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 80, y: -60}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3484769976076511529
@@ -1603,6 +1621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 439aed75fbe547f2a5bb0b38d5e322b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ballMovement: {fileID: 0}
 --- !u!1 &6669482158413556920
 GameObject:
   m_ObjectHideFlags: 0
@@ -1639,9 +1658,9 @@ RectTransform:
   - {fileID: 3656184470664222197}
   m_Father: {fileID: 8778884980133821933}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 280, y: -60}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1579314278523062673

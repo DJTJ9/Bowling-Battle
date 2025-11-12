@@ -6,10 +6,12 @@ public class BallCamera : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private Vector3 offset;
     
-    [Inject] private BallMovement ballMovement;
+    // [Inject] private BallMovement ballMovement;
+    [Inject] private BallSpawner ballSpawner;
 
     private void Update()
     {
-        transform.position = ballMovement.transform.position + offset;
+        if (ballSpawner.CurrentBallInstance == null) return;
+        transform.position = ballSpawner.CurrentBallInstance.transform.position + offset;
     }
 }

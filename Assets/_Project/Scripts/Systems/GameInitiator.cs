@@ -13,32 +13,28 @@ public class GameInitiator : MonoBehaviour
     [SerializeField] private EventSystem eventSystem;
     [SerializeField] private Volume globalVolume;
     [SerializeField] private Injector injector;
-    [SerializeField] private GameObject bowlingBall;
+    [SerializeField] private BallSpawner ballSpawner;
+    [SerializeField] private BallMovement ballMovement;
     [SerializeField] private Canvas PlayerUI;
-    
-    private BallMovement ballMovement;
-    
-    private void Awake()
-    {
-        
-    }
+
     //TODO: * Make start method async to control initialisation steps order
     private void Start()
     {
         SceneManager.LoadScene("BowlingBattleLevel", LoadSceneMode.Additive);
         BindObjects();
-        ballMovement = bowlingBall.GetComponent<BallMovement>();
         InjectDependencies();
         PrepareGame();
     }
 
     private void BindObjects()
     {
-        bowlingBall = Instantiate(bowlingBall);
         mainCamera = Instantiate(mainCamera);
         mainDirectionalLight = Instantiate(mainDirectionalLight);
         eventSystem = Instantiate(eventSystem);
         globalVolume = Instantiate(globalVolume);
+        
+        // ballMovement = Instantiate(ballMovement);
+        ballSpawner = Instantiate(ballSpawner);
         PlayerUI = Instantiate(PlayerUI);
     }
 
@@ -51,6 +47,6 @@ public class GameInitiator : MonoBehaviour
 
     private void PrepareGame()
     {
-        ballMovement.GameStartConfiguration();
+        // ballMovement.GameStartConfiguration();
     }
 }

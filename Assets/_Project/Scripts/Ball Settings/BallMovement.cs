@@ -33,6 +33,8 @@ public class BallMovement : MonoBehaviour, IDependencyProvider
         playerInput = GetComponent<PlayerInput>();
         rb = GetComponent<Rigidbody>();
         playerInput.enabled = true;
+        
+        GameStartConfiguration();
     }
 
     void FixedUpdate()
@@ -69,12 +71,14 @@ public class BallMovement : MonoBehaviour, IDependencyProvider
 
     public void OnJump(InputAction.CallbackContext context)
     {
+        if (context.phase == InputActionPhase.Started)
+        {
             controller.enabled = false;
-            // playerInput.enabled = false;
             rb.freezeRotation = false;
             rb.useGravity = true;
             moveInput = Vector2.zero;
             rb.linearVelocity = Vector3.zero;
+        }
     }
     
     private void MapInputActions() 
