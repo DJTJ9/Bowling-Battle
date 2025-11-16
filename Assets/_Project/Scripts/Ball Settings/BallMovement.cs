@@ -20,6 +20,7 @@ public class BallMovement : MonoBehaviour, IDependencyProvider
     private CharacterController controller;
     private PlayerInput playerInput;
     private Rigidbody rb;
+    // [Inject] private UIManager uiManager;
     
     [Provide]
    BallMovement ProvideBallMovement()
@@ -33,7 +34,11 @@ public class BallMovement : MonoBehaviour, IDependencyProvider
         playerInput = GetComponent<PlayerInput>();
         rb = GetComponent<Rigidbody>();
         playerInput.enabled = true;
-        
+        // uiManager.ShowPlayerUI();
+    }
+
+    private void OnEnable()
+    {
         GameStartConfiguration();
     }
 
@@ -78,6 +83,7 @@ public class BallMovement : MonoBehaviour, IDependencyProvider
             rb.useGravity = true;
             moveInput = Vector2.zero;
             rb.linearVelocity = Vector3.zero;
+            // uiManager.HidePlayerUI();
         }
     }
     

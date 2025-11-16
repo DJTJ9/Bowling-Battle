@@ -593,6 +593,26 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1590641468480887509, guid: 1fc46a25605eb324b8acca6c83e27ca7, type: 3}
+      propertyPath: m_Mass
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1839736531760393477, guid: 1fc46a25605eb324b8acca6c83e27ca7, type: 3}
+      propertyPath: m_Mass
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2085306953240346695, guid: 1fc46a25605eb324b8acca6c83e27ca7, type: 3}
+      propertyPath: m_Mass
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199101737246860674, guid: 1fc46a25605eb324b8acca6c83e27ca7, type: 3}
+      propertyPath: m_Mass
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2538658729000100935, guid: 1fc46a25605eb324b8acca6c83e27ca7, type: 3}
+      propertyPath: m_Mass
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 3542958052899825058, guid: 1fc46a25605eb324b8acca6c83e27ca7, type: 3}
       propertyPath: m_IsTrigger
       value: 0
@@ -604,6 +624,10 @@ PrefabInstance:
     - target: {fileID: 3902321058364796197, guid: 1fc46a25605eb324b8acca6c83e27ca7, type: 3}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4422508901710140517, guid: 1fc46a25605eb324b8acca6c83e27ca7, type: 3}
+      propertyPath: m_Mass
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4517115717100245618, guid: 1fc46a25605eb324b8acca6c83e27ca7, type: 3}
       propertyPath: m_IsTrigger
@@ -621,9 +645,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bowling Pins
       objectReference: {fileID: 0}
+    - target: {fileID: 5523051126354868764, guid: 1fc46a25605eb324b8acca6c83e27ca7, type: 3}
+      propertyPath: m_Mass
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 5953498488625112352, guid: 1fc46a25605eb324b8acca6c83e27ca7, type: 3}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6713890674735425562, guid: 1fc46a25605eb324b8acca6c83e27ca7, type: 3}
+      propertyPath: m_Mass
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7841391288925825298, guid: 1fc46a25605eb324b8acca6c83e27ca7, type: 3}
+      propertyPath: m_Mass
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8380885296249083193, guid: 1fc46a25605eb324b8acca6c83e27ca7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -668,6 +704,10 @@ PrefabInstance:
     - target: {fileID: 8471153028181696701, guid: 1fc46a25605eb324b8acca6c83e27ca7, type: 3}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807915410046594439, guid: 1fc46a25605eb324b8acca6c83e27ca7, type: 3}
+      propertyPath: m_Mass
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

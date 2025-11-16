@@ -1,0 +1,35 @@
+.header {
+    font-size: 100px;
+    color: rgb(255, 255, 255);
+    -unity-font-definition: url("project://database/Assets/_Project/Art/GUIPackCartoon/Demo/Fonts/LilitaOne%20-%20Regular.ttf?fileID=12800000&guid=7f47410f368bf40f4b4be4929906c9c9&type=3#LilitaOne - Regular");
+}
+
+.button {
+    font-size: 20px;
+    width: 220px;
+    height: 60px;
+    align-self: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-image: url("project://database/Assets/_Project/Art/GUIPackCartoon/Demo/Sprites/Buttons/Rectangles/Blue%20(Teal).png?fileID=2800000&guid=0d02c955b35ed40599bb4aca60216d75&type=3#Blue (Teal)");
+    margin-top: 50px;
+    -unity-font-definition: url("project://database/Assets/_Project/Art/GUIPackCartoon/Demo/Fonts/LilitaOne%20-%20Regular.ttf?fileID=12800000&guid=7f47410f368bf40f4b4be4929906c9c9&type=3#LilitaOne - Regular");
+    color: rgb(255, 255, 255);
+    -unity-text-align: middle-center;
+    transition-duration: 0.35s;
+    background-repeat: no-repeat no-repeat;
+    transition-timing-function: ease-out-elastic;
+    transition-property: all;
+}
+
+.button:hover {
+    scale: 1.1 1.1;
+    background-color: rgb(15, 228, 13);
+    transition-timing-function: ease-out-bounce;
+    transition-duration: 0.35s;
+}
+
+Label:hover {
+}

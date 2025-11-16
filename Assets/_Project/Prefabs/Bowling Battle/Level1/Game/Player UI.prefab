@@ -1518,7 +1518,7 @@ GameObject:
   - component: {fileID: 6613445762726951614}
   - component: {fileID: 8733269481805768922}
   - component: {fileID: 4649106005877358819}
-  - component: {fileID: 3232325049896024056}
+  - component: {fileID: 11414122428629165}
   m_Layer: 5
   m_Name: Player UI
   m_TagString: Untagged
@@ -1609,19 +1609,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 55
---- !u!114 &3232325049896024056
+--- !u!114 &11414122428629165
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6438365161011898981}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 439aed75fbe547f2a5bb0b38d5e322b7, type: 3}
+  m_Script: {fileID: 11500000, guid: e5fa1d3a610f48c3906bbd2f80113728, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballMovement: {fileID: 0}
+  playerUI: {fileID: 6613445762726951614}
 --- !u!1 &6669482158413556920
 GameObject:
   m_ObjectHideFlags: 0
