@@ -44,3 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acb94c34c5c44bffac05a57bb192a545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CurrentBallInstance: {fileID: 0}
+  BallSO: {fileID: 11400000, guid: 7466876d70fd3e34eb0ca16be7cdfff7, type: 2}

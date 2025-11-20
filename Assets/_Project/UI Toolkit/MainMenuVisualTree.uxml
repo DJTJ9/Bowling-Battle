@@ -1,8 +1,11 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/_Project/UI%20Toolkit/MainMenuStyle.uss?fileID=7433441132597879392&amp;guid=e731351d4666e9c4897e2fe7176b4205&amp;type=3#MainMenuStyle" />
-    <ui:VisualElement name="Container" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/_Project/Art/Bowling%20Battle.png?fileID=2800000&amp;guid=d164e47d1811e2d44a5c509d5f65c9fc&amp;type=3#Bowling Battle&quot;);">
-        <ui:Label text="Main Menu" name="Header" class="header" style="align-self: center; -unity-text-align: upper-center;" />
-        <ui:Button text="Start&#10;" name="StartGameButton" class="button" />
-        <ui:Button text="Settings&#10;" name="Settings" class="button" />
+    <ui:VisualElement name="main-menu-background__container" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/_Project/Art/Bowling%20Battle.png?fileID=2800000&amp;guid=d164e47d1811e2d44a5c509d5f65c9fc&amp;type=3#Bowling Battle&quot;);">
+        <ui:VisualElement name="main-menu__container" style="flex-grow: 1;">
+            <ui:Label text="MAIN MENU" name="main-menu-header__label" class="header" style="align-self: center; -unity-text-align: upper-center;" />
+            <ui:Button text="START&#10;" name="main-menu-start__button" class="button" />
+            <ui:Button text="SETTINGS&#10;" name="main-menu-settings__button" class="button" />
+            <ui:Button text="QUIT" name="main-menu-quit__button" class="button" />
+        </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

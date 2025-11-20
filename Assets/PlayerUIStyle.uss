@@ -1,0 +1,8 @@
+.score-label {
+    font-size: 30px;
+    -unity-font-definition: url("project://database/Assets/_Project/Art/GUIPackCartoon/Demo/Fonts/LilitaOne%20-%20Regular.ttf?fileID=12800000&guid=7f47410f368bf40f4b4be4929906c9c9&type=3#LilitaOne - Regular");
+    margin-top: 2%;
+    margin-left: 2%;
+    -unity-font-style: bold;
+    color: rgb(46, 231, 0);
+}
