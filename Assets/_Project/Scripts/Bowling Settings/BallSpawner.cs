@@ -5,6 +5,8 @@ using UnityEngine;
 public class BallSpawner : MonoBehaviour, IDependencyProvider
 {
     public GameObject CurrentBallInstance;
+    
+    public BowlingBallSO BallSO;
 
     [Provide] BallSpawner ProvideBallSpawner() => this;
 
@@ -14,5 +16,6 @@ public class BallSpawner : MonoBehaviour, IDependencyProvider
             Destroy(CurrentBallInstance);
         
         CurrentBallInstance = Instantiate(ballSO.ball, transform.position, transform.rotation);
+        BallSO = ballSO;
     }
 }
