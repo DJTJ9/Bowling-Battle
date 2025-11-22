@@ -6,9 +6,11 @@ using UnityEngine.Serialization;
 public class GameScoreSO : ScriptableObject
 {
     public float Value = 0;
+    
+    private const float zero = 0f;
 
     private void OnEnable()
     {
-        Value = 0;
+        Value = zero;
     }
 }

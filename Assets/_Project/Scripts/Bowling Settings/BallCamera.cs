@@ -11,6 +11,11 @@ public class BallCamera : MonoBehaviour
 
     private void Update()
     {
+        SetCameraPosition();
+    }
+    
+    private void SetCameraPosition()
+    {
         if (ballSpawner.CurrentBallInstance == null) return;
         transform.position = ballSpawner.CurrentBallInstance.transform.position + offset;
     }

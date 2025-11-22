@@ -5,12 +5,11 @@ using UnityEngine.UIElements;
 
 public class PlayerUIEvents : MonoBehaviour
 {
-    private UIDocument document;
-    
     [SerializeField] private BowlingBallSO basketballSO;
     [SerializeField] private BowlingBallSO baseballSO;
     [SerializeField] private BowlingBallSO footballSO;
     
+    private UIDocument document;
     private Button basketBallButton;
     private Button baseBallButton;
     private Button footBallButton;

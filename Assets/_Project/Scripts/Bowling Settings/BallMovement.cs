@@ -21,12 +21,6 @@ public class BallMovement : MonoBehaviour, IDependencyProvider
     private PlayerInput playerInput;
     private Rigidbody rb;
     // [Inject] private UIManager uiManager;
-    
-    [Provide]
-   BallMovement ProvideBallMovement()
-    {
-        return this;
-    }
 
     private void Awake()
     {
@@ -40,6 +34,11 @@ public class BallMovement : MonoBehaviour, IDependencyProvider
     private void OnEnable()
     {
         GameStartConfiguration();
+    }
+    
+    private void OnDisable()
+    {
+        UnmapInputActions();
     }
 
     void FixedUpdate()
@@ -78,6 +77,7 @@ public class BallMovement : MonoBehaviour, IDependencyProvider
     {
         if (context.phase == InputActionPhase.Started)
         {
+            if (controller == null) return;
             controller.enabled = false;
             rb.freezeRotation = false;
             rb.useGravity = true;
@@ -93,6 +93,11 @@ public class BallMovement : MonoBehaviour, IDependencyProvider
 
         jumpInputAction = playerInput.actions["Jump"];
         jumpInputAction.started += OnJump;
+    }
+
+    private void UnmapInputActions()
+    {
+        moveInputAction.started -= OnJump;
     }
 
     private void ResetComponents()
