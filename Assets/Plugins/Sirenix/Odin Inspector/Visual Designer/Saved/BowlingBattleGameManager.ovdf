@@ -1,0 +1,34 @@
+OVDF v1.0
+BowlingBattleGameManager, Assembly-CSharp
+
+# $EdZEyRbXTmzVtMsWs3bA9Q
+Position: $root:11
++ [Sirenix.OdinInspector.FoldoutGroupAttribute]
+	GroupName = "Game Events"
+
+# maxRounds
+Position: "Round Settings":0
++ [Sirenix.OdinInspector.LabelWidthAttribute]
+	Width = 200
+
+# preparationPhaseDuration
+Position: "Round Settings":1
++ [Sirenix.OdinInspector.LabelWidthAttribute]
+	Width = 200
+
+# roundDuration
+Position: "Round Settings":2
++ [Sirenix.OdinInspector.LabelWidthAttribute]
+	Width = 200
+
+# onPreparationPhaseStart
+Position: $EdZEyRbXTmzVtMsWs3bA9Q:0
+
+# onReleaseBall
+Position: $EdZEyRbXTmzVtMsWs3bA9Q:1
+
+# onRoundEnd
+Position: $EdZEyRbXTmzVtMsWs3bA9Q:2
+
+# onGameEnd
+Position: $EdZEyRbXTmzVtMsWs3bA9Q:3
