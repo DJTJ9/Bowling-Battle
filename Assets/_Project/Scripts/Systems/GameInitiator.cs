@@ -16,10 +16,9 @@ public class GameInitiator : MonoBehaviour
     [SerializeField] private Injector injector;
     [SerializeField] private BallSpawner ballSpawner;
     [SerializeField] private BallMovement ballMovement;
-    // [SerializeField] private Canvas PlayerUI;
     [SerializeField] private UIDocument playerUI;
-
     [SerializeField] private GameObject bowlingPins;
+
 
     //TODO: * Make start method async to control initialisation steps order
     private void Start()
@@ -39,7 +38,6 @@ public class GameInitiator : MonoBehaviour
         
         // ballMovement = Instantiate(ballMovement);
         ballSpawner = Instantiate(ballSpawner);
-        // PlayerUI = Instantiate(PlayerUI);
         playerUI = Instantiate(playerUI);
         bowlingPins = Instantiate(bowlingPins);
     }

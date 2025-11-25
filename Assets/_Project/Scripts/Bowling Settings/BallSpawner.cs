@@ -9,6 +9,11 @@ public class BallSpawner : MonoBehaviour, IDependencyProvider
     public BowlingBallSO BallSO;
 
     [Provide] BallSpawner ProvideBallSpawner() => this;
+    
+    private void Awake()
+    {
+        CurrentBallInstance = GetComponentInChildren<BallMovement>().gameObject;
+    }
 
     public void SpawnBall(BowlingBallSO ballSO)
     {

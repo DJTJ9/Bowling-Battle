@@ -1,6 +1,7 @@
 ﻿using System;
 using DependencyInjection;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 [RequireComponent (typeof(CharacterController), typeof(PlayerInput), typeof(Rigidbody))]
@@ -20,15 +21,17 @@ public class BallMovement : MonoBehaviour, IDependencyProvider
     private CharacterController controller;
     private PlayerInput playerInput;
     private Rigidbody rb;
-    // [Inject] private UIManager uiManager;
-
+    
+    private Transform startPosition;
+    
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
         playerInput = GetComponent<PlayerInput>();
         rb = GetComponent<Rigidbody>();
         playerInput.enabled = true;
-        // uiManager.ShowPlayerUI();
+        
+        startPosition = transform;
     }
 
     private void OnEnable()
@@ -83,8 +86,19 @@ public class BallMovement : MonoBehaviour, IDependencyProvider
             rb.useGravity = true;
             moveInput = Vector2.zero;
             rb.linearVelocity = Vector3.zero;
-            // uiManager.HidePlayerUI();
+            // OnBallReleased.Invoke();
         }
+    }
+    
+    public void OnReleaseBall()
+    {
+            if (controller == null) return;
+            controller.enabled = false;
+            rb.freezeRotation = false;
+            rb.useGravity = true;
+            moveInput = Vector2.zero;
+            rb.linearVelocity = Vector3.zero;
+            // OnBallReleased.Invoke();
     }
     
     private void MapInputActions() 
@@ -100,12 +114,13 @@ public class BallMovement : MonoBehaviour, IDependencyProvider
         moveInputAction.started -= OnJump;
     }
 
-    private void ResetComponents()
+    public void ResetComponents()
     {
         controller.enabled = true;
         playerInput.enabled = true;
         rb.freezeRotation = true;
         rb.useGravity = false;
+        transform.position = startPosition.position;
     }
     
     private void SetCameraForPlayerInput()

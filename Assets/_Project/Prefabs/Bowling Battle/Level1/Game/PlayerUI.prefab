@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5003131668317223091}
   - component: {fileID: 8396802375329437147}
   - component: {fileID: 7933232306700003134}
+  - component: {fileID: 6441137660144516475}
   m_Layer: 5
   m_Name: PlayerUI
   m_TagString: Untagged
@@ -64,6 +65,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d11bc358d07141cea690a8312855166d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basketballSO: {fileID: 11400000, guid: 61a8b7ab76e1e6941b6341d806094675, type: 2}
-  baseballSO: {fileID: 11400000, guid: e228eb49c4270294895924b0a2730803, type: 2}
-  footballSO: {fileID: 11400000, guid: 7466876d70fd3e34eb0ca16be7cdfff7, type: 2}
+  ballCollectionSO: {fileID: 11400000, guid: 131a9e8b8cdee3d4aa3eae10dc865e3f, type: 2}
+--- !u!114 &6441137660144516475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720277753890941773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948c398dd6a1c584eb0de95d290e6190, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 0c9cf36ab4b7dbe4696ea5ec1f1878f5, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7933232306700003134}
+        m_TargetAssemblyTypeName: PlayerUIEvents, Assembly-CSharp
+        m_MethodName: HideMiddlePlayerUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
