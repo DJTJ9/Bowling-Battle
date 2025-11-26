@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3917112092437944898}
   - component: {fileID: 5980675232265475579}
   - component: {fileID: 1090890519412763013}
+  - component: {fileID: 6199742015218426433}
   - component: {fileID: 8411059100576010724}
   - component: {fileID: 2445237044291195867}
   - component: {fileID: 5488142940482084349}
@@ -154,6 +155,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreSO: {fileID: 11400000, guid: 22d2f8786f167b249ba84b42cd580d6a, type: 2}
+--- !u!114 &6199742015218426433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 345230086429198477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 832decda236c41f9b951576c941a439f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!64 &8411059100576010724
 MeshCollider:
   m_ObjectHideFlags: 0

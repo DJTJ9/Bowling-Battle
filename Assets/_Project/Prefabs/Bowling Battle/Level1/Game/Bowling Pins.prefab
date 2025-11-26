@@ -146,6 +146,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7795283640807073583, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7341830498641781438}
+    - targetCorrespondingSourceObject: {fileID: 7795283640807073583, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2526681692638565351}
+    - targetCorrespondingSourceObject: {fileID: 7795283640807073583, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 30684849081877547}
   m_SourcePrefab: {fileID: 100100000, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
 --- !u!4 &6537223289893106132 stripped
 Transform:
@@ -258,6 +264,46 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: -1
   m_Mesh: {fileID: 4300000, guid: fe734c5b0ac953643b50887f28f93041, type: 2}
+--- !u!114 &2526681692638565351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7846317469104587719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 832decda236c41f9b951576c941a439f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &30684849081877547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7846317469104587719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948c398dd6a1c584eb0de95d290e6190, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: d07adf3c51032b94a8172e7e64c07131, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2526681692638565351}
+        m_TargetAssemblyTypeName: PinReseter, Assembly-CSharp
+        m_MethodName: ResetPinPosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &326445441017329807
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -363,6 +409,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7795283640807073583, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1328108057799517892}
+    - targetCorrespondingSourceObject: {fileID: 7795283640807073583, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9106952424877142065}
+    - targetCorrespondingSourceObject: {fileID: 7795283640807073583, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8839556089130854693}
   m_SourcePrefab: {fileID: 100100000, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
 --- !u!4 &6841799705862401459 stripped
 Transform:
@@ -475,6 +527,46 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: -1
   m_Mesh: {fileID: 4300000, guid: 074975b4c35f4d342b630a60d36c9599, type: 2}
+--- !u!114 &9106952424877142065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7541749600115892128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 832decda236c41f9b951576c941a439f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8839556089130854693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7541749600115892128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948c398dd6a1c584eb0de95d290e6190, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: d07adf3c51032b94a8172e7e64c07131, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9106952424877142065}
+        m_TargetAssemblyTypeName: PinReseter, Assembly-CSharp
+        m_MethodName: ResetPinPosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &424812030450109956
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -580,6 +672,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7795283640807073583, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5921044527822805461}
+    - targetCorrespondingSourceObject: {fileID: 7795283640807073583, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6840433729929133616}
+    - targetCorrespondingSourceObject: {fileID: 7795283640807073583, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2002824149300685277}
   m_SourcePrefab: {fileID: 100100000, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
 --- !u!4 &6886017819383978808 stripped
 Transform:
@@ -692,6 +790,46 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: -1
   m_Mesh: {fileID: 4300000, guid: 3e35071c30945644aaa6f16303e9d945, type: 2}
+--- !u!114 &6840433729929133616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7623280673497983275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 832decda236c41f9b951576c941a439f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2002824149300685277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7623280673497983275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948c398dd6a1c584eb0de95d290e6190, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: d07adf3c51032b94a8172e7e64c07131, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6840433729929133616}
+        m_TargetAssemblyTypeName: PinReseter, Assembly-CSharp
+        m_MethodName: ResetPinPosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &616293930572185948
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -797,6 +935,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7795283640807073583, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5627506692726856189}
+    - targetCorrespondingSourceObject: {fileID: 7795283640807073583, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6969086461081306551}
+    - targetCorrespondingSourceObject: {fileID: 7795283640807073583, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1107598854430716277}
   m_SourcePrefab: {fileID: 100100000, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
 --- !u!4 &5978727396324594784 stripped
 Transform:
@@ -909,6 +1053,46 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: -1
   m_Mesh: {fileID: 4300000, guid: 47ae34cfa48868d46b80cc9bad28aa58, type: 2}
+--- !u!114 &6969086461081306551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7251900662743836275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 832decda236c41f9b951576c941a439f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1107598854430716277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7251900662743836275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948c398dd6a1c584eb0de95d290e6190, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: d07adf3c51032b94a8172e7e64c07131, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6969086461081306551}
+        m_TargetAssemblyTypeName: PinReseter, Assembly-CSharp
+        m_MethodName: ResetPinPosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1540545213509128021
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1014,6 +1198,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7795283640807073583, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2848571080790263734}
+    - targetCorrespondingSourceObject: {fileID: 7795283640807073583, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1237723675326322102}
+    - targetCorrespondingSourceObject: {fileID: 7795283640807073583, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4516188019060987333}
   m_SourcePrefab: {fileID: 100100000, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
 --- !u!4 &5698229210448730729 stripped
 Transform:
@@ -1126,6 +1316,46 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: -1
   m_Mesh: {fileID: 4300000, guid: 7b318644789a0dd41833457f688ac0dc, type: 2}
+--- !u!114 &1237723675326322102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8741333624476657786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 832decda236c41f9b951576c941a439f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4516188019060987333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8741333624476657786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948c398dd6a1c584eb0de95d290e6190, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: d07adf3c51032b94a8172e7e64c07131, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1237723675326322102}
+        m_TargetAssemblyTypeName: PinReseter, Assembly-CSharp
+        m_MethodName: ResetPinPosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &3017622099340163841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1231,6 +1461,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7795283640807073583, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6585093832606409093}
+    - targetCorrespondingSourceObject: {fileID: 7795283640807073583, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4709113776354353150}
+    - targetCorrespondingSourceObject: {fileID: 7795283640807073583, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3125787863906364742}
   m_SourcePrefab: {fileID: 100100000, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
 --- !u!1 &5030193559814396974 stripped
 GameObject:
@@ -1338,6 +1574,46 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: -1
   m_Mesh: {fileID: 4300000, guid: 51e64811a831cf9458e48299dbd55bed, type: 2}
+--- !u!114 &4709113776354353150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5030193559814396974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 832decda236c41f9b951576c941a439f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3125787863906364742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5030193559814396974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948c398dd6a1c584eb0de95d290e6190, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: d07adf3c51032b94a8172e7e64c07131, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4709113776354353150}
+        m_TargetAssemblyTypeName: PinReseter, Assembly-CSharp
+        m_MethodName: ResetPinPosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &8328721127059172925 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6518169857571083580, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
@@ -1448,6 +1724,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7795283640807073583, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5731649257957348393}
+    - targetCorrespondingSourceObject: {fileID: 7795283640807073583, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 330092970114854869}
+    - targetCorrespondingSourceObject: {fileID: 7795283640807073583, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8143093684544011935}
   m_SourcePrefab: {fileID: 100100000, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
 --- !u!1 &6794852091652970365 stripped
 GameObject:
@@ -1555,6 +1837,46 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: -1
   m_Mesh: {fileID: 4300000, guid: d1c0a186697b2d14cbbc13a1d68e4de0, type: 2}
+--- !u!114 &330092970114854869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6794852091652970365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 832decda236c41f9b951576c941a439f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8143093684544011935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6794852091652970365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948c398dd6a1c584eb0de95d290e6190, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: d07adf3c51032b94a8172e7e64c07131, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 330092970114854869}
+        m_TargetAssemblyTypeName: PinReseter, Assembly-CSharp
+        m_MethodName: ResetPinPosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &7500586999630095726 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6518169857571083580, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
@@ -1665,6 +1987,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7795283640807073583, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8498549802075526523}
+    - targetCorrespondingSourceObject: {fileID: 7795283640807073583, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7158909037906876663}
+    - targetCorrespondingSourceObject: {fileID: 7795283640807073583, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5966525529799751029}
   m_SourcePrefab: {fileID: 100100000, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
 --- !u!4 &1259206180563251332 stripped
 Transform:
@@ -1777,6 +2105,46 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: -1
   m_Mesh: {fileID: 4300000, guid: 4c6d63f8f77d14a40820536a135338d8, type: 2}
+--- !u!114 &7158909037906876663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2820027978797548183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 832decda236c41f9b951576c941a439f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5966525529799751029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2820027978797548183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948c398dd6a1c584eb0de95d290e6190, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: d07adf3c51032b94a8172e7e64c07131, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7158909037906876663}
+        m_TargetAssemblyTypeName: PinReseter, Assembly-CSharp
+        m_MethodName: ResetPinPosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &6820546839857408834
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1832,13 +2200,60 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 345230086429198477, guid: 28dfffb05688a1e429e70d0172738272, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2793513386671672074}
   m_SourcePrefab: {fileID: 100100000, guid: 28dfffb05688a1e429e70d0172738272, type: 3}
+--- !u!114 &625608600742889731 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6199742015218426433, guid: 28dfffb05688a1e429e70d0172738272, type: 3}
+  m_PrefabInstance: {fileID: 6820546839857408834}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6516132353251664847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 832decda236c41f9b951576c941a439f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &6209171010102824434 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 615897022247478960, guid: 28dfffb05688a1e429e70d0172738272, type: 3}
   m_PrefabInstance: {fileID: 6820546839857408834}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6516132353251664847 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 345230086429198477, guid: 28dfffb05688a1e429e70d0172738272, type: 3}
+  m_PrefabInstance: {fileID: 6820546839857408834}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2793513386671672074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6516132353251664847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948c398dd6a1c584eb0de95d290e6190, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: d07adf3c51032b94a8172e7e64c07131, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 625608600742889731}
+        m_TargetAssemblyTypeName: PinReseter, Assembly-CSharp
+        m_MethodName: ResetPinPosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &7041951928257090162
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1944,6 +2359,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7795283640807073583, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5595709531360533752}
+    - targetCorrespondingSourceObject: {fileID: 7795283640807073583, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7763022862937599252}
+    - targetCorrespondingSourceObject: {fileID: 7795283640807073583, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4033541709261768644}
   m_SourcePrefab: {fileID: 100100000, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}
 --- !u!1 &978513480625435997 stripped
 GameObject:
@@ -2051,6 +2472,46 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: -1
   m_Mesh: {fileID: 4300000, guid: 95e7511eab4dd204e857746a9ed692b5, type: 2}
+--- !u!114 &7763022862937599252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978513480625435997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 832decda236c41f9b951576c941a439f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4033541709261768644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978513480625435997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948c398dd6a1c584eb0de95d290e6190, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: d07adf3c51032b94a8172e7e64c07131, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7763022862937599252}
+        m_TargetAssemblyTypeName: PinReseter, Assembly-CSharp
+        m_MethodName: ResetPinPosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &4309726089620145998 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6518169857571083580, guid: ece4f6ded34be8345bd7fb6f61ef3afb, type: 3}

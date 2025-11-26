@@ -1,11 +1,8 @@
-﻿using System;
-using DependencyInjection;
-using UnityEngine;
-using UnityEngine.Events;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent (typeof(CharacterController), typeof(PlayerInput), typeof(Rigidbody))]
-public class BallMovement : MonoBehaviour, IDependencyProvider
+public class BallMovement : MonoBehaviour
 {
     [Header("Input")]
     private Vector2 moveInput;
@@ -86,7 +83,6 @@ public class BallMovement : MonoBehaviour, IDependencyProvider
             rb.useGravity = true;
             moveInput = Vector2.zero;
             rb.linearVelocity = Vector3.zero;
-            // OnBallReleased.Invoke();
         }
     }
     
@@ -98,7 +94,6 @@ public class BallMovement : MonoBehaviour, IDependencyProvider
             rb.useGravity = true;
             moveInput = Vector2.zero;
             rb.linearVelocity = Vector3.zero;
-            // OnBallReleased.Invoke();
     }
     
     private void MapInputActions() 

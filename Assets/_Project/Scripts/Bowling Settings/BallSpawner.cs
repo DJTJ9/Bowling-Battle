@@ -1,18 +1,24 @@
 ﻿using System;
 using DependencyInjection;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class BallSpawner : MonoBehaviour, IDependencyProvider
 {
     public GameObject CurrentBallInstance;
     
-    public BowlingBallSO BallSO;
+    public BowlingBallSO CurrentBallSO;
+    
+    [SerializeField] private BowlingBallCollectionSO ballCollectionSO;
 
     [Provide] BallSpawner ProvideBallSpawner() => this;
     
     private void Awake()
     {
-        CurrentBallInstance = GetComponentInChildren<BallMovement>().gameObject;
+        CurrentBallInstance = Instantiate(ballCollectionSO.BowlingBalls[BallType.Basketball].ball,
+            transform.position, transform.rotation);
+
+        CurrentBallSO = ballCollectionSO.BowlingBalls[BallType.Basketball];
     }
 
     public void SpawnBall(BowlingBallSO ballSO)
@@ -21,6 +27,6 @@ public class BallSpawner : MonoBehaviour, IDependencyProvider
             Destroy(CurrentBallInstance);
         
         CurrentBallInstance = Instantiate(ballSO.ball, transform.position, transform.rotation);
-        BallSO = ballSO;
+        CurrentBallSO = ballSO;
     }
 }

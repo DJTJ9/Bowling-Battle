@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3845879009837394343}
   - component: {fileID: 2585314517416034915}
+  - component: {fileID: 1754577548174606857}
   m_Layer: 0
   m_Name: BallSpawner
   m_TagString: Untagged
@@ -29,8 +30,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 11, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 7189135267210816060}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2585314517416034915
@@ -45,76 +45,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acb94c34c5c44bffac05a57bb192a545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentBallInstance: {fileID: 8464716679316115410}
-  BallSO: {fileID: 11400000, guid: 7466876d70fd3e34eb0ca16be7cdfff7, type: 2}
---- !u!1001 &7409555711103948396
-PrefabInstance:
+  CurrentBallInstance: {fileID: 0}
+  CurrentBallSO: {fileID: 0}
+  ballCollectionSO: {fileID: 11400000, guid: 131a9e8b8cdee3d4aa3eae10dc865e3f, type: 2}
+--- !u!114 &1754577548174606857
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 3845879009837394343}
-    m_Modifications:
-    - target: {fileID: -4531672552053468181, guid: 859a0f0fcda909543b4b126cc86b61b4, type: 3}
-      propertyPath: OnBallReleased.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 365064003678125136, guid: 859a0f0fcda909543b4b126cc86b61b4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 365064003678125136, guid: 859a0f0fcda909543b4b126cc86b61b4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 365064003678125136, guid: 859a0f0fcda909543b4b126cc86b61b4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 365064003678125136, guid: 859a0f0fcda909543b4b126cc86b61b4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 365064003678125136, guid: 859a0f0fcda909543b4b126cc86b61b4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 365064003678125136, guid: 859a0f0fcda909543b4b126cc86b61b4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 365064003678125136, guid: 859a0f0fcda909543b4b126cc86b61b4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 365064003678125136, guid: 859a0f0fcda909543b4b126cc86b61b4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 365064003678125136, guid: 859a0f0fcda909543b4b126cc86b61b4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 365064003678125136, guid: 859a0f0fcda909543b4b126cc86b61b4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1417702947070368190, guid: 859a0f0fcda909543b4b126cc86b61b4, type: 3}
-      propertyPath: m_Name
-      value: Basketball
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 859a0f0fcda909543b4b126cc86b61b4, type: 3}
---- !u!4 &7189135267210816060 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 365064003678125136, guid: 859a0f0fcda909543b4b126cc86b61b4, type: 3}
-  m_PrefabInstance: {fileID: 7409555711103948396}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &8464716679316115410 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1417702947070368190, guid: 859a0f0fcda909543b4b126cc86b61b4, type: 3}
-  m_PrefabInstance: {fileID: 7409555711103948396}
-  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503383411098096061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948c398dd6a1c584eb0de95d290e6190, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: d07adf3c51032b94a8172e7e64c07131, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2585314517416034915}
+        m_TargetAssemblyTypeName: BallSpawner, Assembly-CSharp
+        m_MethodName: SpawnBall
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 61a8b7ab76e1e6941b6341d806094675, type: 2}
+          m_ObjectArgumentAssemblyTypeName: BowlingBallSO, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

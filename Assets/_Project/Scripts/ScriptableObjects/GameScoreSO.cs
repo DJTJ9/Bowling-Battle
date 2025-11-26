@@ -5,12 +5,15 @@ using UnityEngine.Serialization;
 [CreateAssetMenu(fileName = "Game Score", menuName = "Scriptable Objects/Game Score", order = 1)]
 public class GameScoreSO : ScriptableObject
 {
-    public float Value = 0;
+    public float Value;
     
-    private const float zero = 0f;
-
     private void OnEnable()
     {
-        Value = zero;
+        ResetScore();
+    }
+
+    private void ResetScore()
+    {
+        Value = 0f;
     }
 }

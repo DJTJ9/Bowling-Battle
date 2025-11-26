@@ -1,0 +1,8 @@
+OVDF v1.0
+BallSpawner, Assembly-CSharp
+
+# CurrentBallSO
++ [Sirenix.OdinInspector.HideInEditorModeAttribute]
+
+# CurrentBallInstance
++ [Sirenix.OdinInspector.HideInEditorModeAttribute]
