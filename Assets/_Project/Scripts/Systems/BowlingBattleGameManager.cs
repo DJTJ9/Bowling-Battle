@@ -6,6 +6,7 @@ using UnityEngine.Events;
 
 public class BowlingBattleGameManager : MonoBehaviour
 {
+    [SerializeField] private UnityEvent onGameStart;
     [SerializeField] private UnityEvent onPreparationPhaseStart;
     [SerializeField] private UnityEvent onReleaseBall;
     [SerializeField] private UnityEvent onRoundEnd;
@@ -32,7 +33,7 @@ private void Start()
         roundTimer = new CountdownTimer(roundDuration);
         roundTimer.OnTimerStop += EndRound;
         
-        onPreparationPhaseStart.Invoke();
+        onGameStart.Invoke();
     }
 
     private void OnDisable()
@@ -43,6 +44,7 @@ private void Start()
 
     public void StartPreparationPhase()
     {
+        onPreparationPhaseStart.Invoke();
         preparationPhaseTimer.Reset();
         preparationPhaseTimer.Start();
     }

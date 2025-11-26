@@ -6,21 +6,14 @@ using UnityEngine.Serialization;
 public class ScoreCalculator : MonoBehaviour
 {
     [SerializeField] private GameScoreSO scoreSO;
-    // [SerializeField] private LayerMask groundLayer;
     
     [Inject] private BallSpawner ballSpawner;
 
-    private void OnTriggerEnter(Collider other) 
+    public void ScoreChecker() 
     {
-        if (scoreSO == null) return;
-        
-        scoreSO.Value += ballSpawner.CurrentBallSO.pointMultiplier;
+        if (-10f < transform.rotation.x || transform.position.x > 10f || -10f < transform.rotation.z || transform.position.z > 10f)
+        {
+            scoreSO.Value += ballSpawner.CurrentBallSO.pointMultiplier;
+        }
     }
-
-    // private void OnTriggerExit(Collider other) 
-    // {
-    //     if (scoreSO == null) return;
-    //     
-    //     scoreSO.Value -= ballSpawner.CurrentBallSO.pointMultiplier;
-    // }
 }
