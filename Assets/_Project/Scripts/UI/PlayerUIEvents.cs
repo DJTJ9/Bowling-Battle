@@ -55,6 +55,16 @@ public class PlayerUIEvents : MonoBehaviour
         ballSpawner.SpawnBall(ballSO);
     }
 
+    public void ShowLeftPlayerUI()
+    {
+        leftPlayerUI.style.display = DisplayStyle.Flex;
+    }
+    
+    public void HideLeftPlayerUI()
+    {
+        leftPlayerUI.style.display = DisplayStyle.None;
+    }
+    
     public void ShowMiddlePlayerUI()
     {
         middlePlayerUI.style.display = DisplayStyle.Flex;
@@ -65,8 +75,23 @@ public class PlayerUIEvents : MonoBehaviour
         middlePlayerUI.style.display = DisplayStyle.None;
     }
 
+    public void ShowRightPlayerUI()
+    {
+        rightPlayerUI.style.display = DisplayStyle.Flex;
+    }
+    
+    public void HideRightPlayerUI()
+    {
+        rightPlayerUI.style.display = DisplayStyle.None;
+    }
+    
     public void ShowEndscreenUI()
     {
         endscreenUI.style.display = DisplayStyle.Flex;
+    }
+    
+    public void HideEndscreenUI()
+    {
+        endscreenUI.style.display = DisplayStyle.None;
     }
 }

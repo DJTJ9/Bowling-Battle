@@ -49,15 +49,15 @@ namespace UnityUtils.Lowlevel {
             return false;
         }
 
-        public static void PrintPlayerLoop(PlayerLoopSystem loop) {
-            StringBuilder sb = new StringBuilder();
-            sb.AppendLine("Unity Player Loop");
-
-            foreach (PlayerLoopSystem subSystem in loop.subSystemList) {
-                PrintSubSystem(subSystem, sb, 0);
-            }
-            Debug.Log(sb.ToString());
-        }
+        // public static void PrintPlayerLoop(PlayerLoopSystem loop) {
+        //     StringBuilder sb = new StringBuilder();
+        //     sb.AppendLine("Unity Player Loop");
+        //
+        //     foreach (PlayerLoopSystem subSystem in loop.subSystemList) {
+        //         PrintSubSystem(subSystem, sb, 0);
+        //     }
+        //     Debug.Log(sb.ToString());
+        // }
 
         static void PrintSubSystem(PlayerLoopSystem system, StringBuilder sb, int level) {
             sb.Append(' ', level * 2).AppendLine(system.type.ToString());

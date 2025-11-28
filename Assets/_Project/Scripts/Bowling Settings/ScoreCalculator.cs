@@ -5,13 +5,17 @@ using UnityEngine.Serialization;
 
 public class ScoreCalculator : MonoBehaviour
 {
+    [SerializeField] private float isFallenDotProductThreshold = 0.7f;
     [SerializeField] private GameScoreSO scoreSO;
     
     [Inject] private BallSpawner ballSpawner;
 
     public void ScoreChecker() 
     {
-        if (-10f < transform.rotation.x || transform.position.x > 10f || -10f < transform.rotation.z || transform.position.z > 10f)
+        float dotProduct = Vector3.Dot(transform.up, Vector3.up);
+        bool isFallen = dotProduct < isFallenDotProductThreshold;
+        
+        if (isFallen)
         {
             scoreSO.Value += ballSpawner.CurrentBallSO.pointMultiplier;
         }

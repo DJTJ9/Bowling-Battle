@@ -67,6 +67,7 @@ private void Start()
     {
         if (roundIndex == maxRounds)
         {
+            onRoundEnd.Invoke();
             onGameEnd.Invoke();
             return;
         }

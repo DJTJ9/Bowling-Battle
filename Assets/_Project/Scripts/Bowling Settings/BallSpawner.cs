@@ -5,9 +5,8 @@ using UnityEngine.Serialization;
 
 public class BallSpawner : MonoBehaviour, IDependencyProvider
 {
-    public GameObject CurrentBallInstance;
-    
-    public BowlingBallSO CurrentBallSO;
+    public GameObject CurrentBallInstance { get; private set; }
+    public BowlingBallSO CurrentBallSO { get; private set; }
     
     [SerializeField] private BowlingBallCollectionSO ballCollectionSO;
 

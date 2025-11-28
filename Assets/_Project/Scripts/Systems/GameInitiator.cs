@@ -2,7 +2,6 @@
 using UnityEngine;
 using System.Threading.Tasks;
 using UnityEngine.EventSystems;
-using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
@@ -18,6 +17,7 @@ public class GameInitiator : MonoBehaviour
     [SerializeField] private BallMovement ballMovement;
     [SerializeField] private UIDocument playerUI;
     [SerializeField] private GameObject bowlingPins;
+    [SerializeField] private GameObject gameManager;
 
 
     //TODO: * Make start method async to control initialisation steps order
@@ -36,10 +36,11 @@ public class GameInitiator : MonoBehaviour
         eventSystem = Instantiate(eventSystem);
         globalVolume = Instantiate(globalVolume);
         
-        // ballMovement = Instantiate(ballMovement);
         ballSpawner = Instantiate(ballSpawner);
         playerUI = Instantiate(playerUI);
         bowlingPins = Instantiate(bowlingPins);
+        
+        gameManager = Instantiate(gameManager);
     }
 
     private void InjectDependencies()
