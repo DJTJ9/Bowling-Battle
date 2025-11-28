@@ -43,18 +43,21 @@ public class PlayerUIEvents : MonoBehaviour
     private void BindButtonsWithEvents()
     {
         baseBallButton = document.rootVisualElement.Q("ball-selector-baseball__button") as Button;
-        baseBallButton?.RegisterCallback<ClickEvent>(evt => SpawnBall(ballCollectionSO.BowlingBalls[BallType.Baseball]));
+        baseBallButton?.RegisterCallback<ClickEvent>
+            (evt => SpawnBall(ballCollectionSO.BowlingBalls[BallType.Baseball]));
         basketBallButton = document.rootVisualElement.Q("ball-selector-basketball__button") as Button;
-        basketBallButton?.RegisterCallback<ClickEvent>(evt => SpawnBall(ballCollectionSO.BowlingBalls[BallType.Basketball]));
+        basketBallButton?.RegisterCallback<ClickEvent>
+            (evt => SpawnBall(ballCollectionSO.BowlingBalls[BallType.Basketball]));
         footBallButton = document.rootVisualElement.Q("ball-selector-football__button") as Button;
-        footBallButton?.RegisterCallback<ClickEvent>(evt => SpawnBall(ballCollectionSO.BowlingBalls[BallType.Football]));
+        footBallButton?.RegisterCallback<ClickEvent>
+            (evt => SpawnBall(ballCollectionSO.BowlingBalls[BallType.Football]));
     }
 
     private void SpawnBall(BowlingBallSO ballSO)
     {
         ballSpawner.SpawnBall(ballSO);
     }
-
+    
     public void ShowLeftPlayerUI()
     {
         leftPlayerUI.style.display = DisplayStyle.Flex;
@@ -74,7 +77,7 @@ public class PlayerUIEvents : MonoBehaviour
     {
         middlePlayerUI.style.display = DisplayStyle.None;
     }
-
+    
     public void ShowRightPlayerUI()
     {
         rightPlayerUI.style.display = DisplayStyle.Flex;

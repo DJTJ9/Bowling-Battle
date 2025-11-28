@@ -228,6 +228,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stinky
       objectReference: {fileID: 0}
+    - target: {fileID: 6734925923543789757, guid: 33622726591c43847a946980f3bb66f2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

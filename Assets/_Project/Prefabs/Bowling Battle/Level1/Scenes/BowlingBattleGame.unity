@@ -447,7 +447,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &395341467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -495,6 +495,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3845879009837394343, guid: 7f0bedc94043c6240b9fecdc51390ef6, type: 3}
   m_PrefabInstance: {fileID: 1415831339}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &587598460 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3367394591103643377, guid: 93419ca99a6de3544bf11e2568ed399c, type: 3}
+  m_PrefabInstance: {fileID: 4192006763766506663}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fa83885c7b14248b0ef9c5b9fd51df9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &588948731 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4618387533725308182, guid: 5ad1d818a37fcf74292ce513c2a3f0d8, type: 3}
@@ -566,6 +577,58 @@ MonoBehaviour:
       - m_Target: {fileID: 871579975}
         m_TargetAssemblyTypeName: PlayerUIEvents, Assembly-CSharp
         m_MethodName: HideRightPlayerUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &871579985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64992795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948c398dd6a1c584eb0de95d290e6190, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 57ccbad40999b15418300da730dd76d5, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 871579975}
+        m_TargetAssemblyTypeName: PlayerUIEvents, Assembly-CSharp
+        m_MethodName: ShowLeftPlayerUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 871579975}
+        m_TargetAssemblyTypeName: PlayerUIEvents, Assembly-CSharp
+        m_MethodName: ShowMiddlePlayerUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 871579975}
+        m_TargetAssemblyTypeName: PlayerUIEvents, Assembly-CSharp
+        m_MethodName: ShowRightPlayerUI
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -766,7 +829,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1849304951
 Transform:
   m_ObjectHideFlags: 0
@@ -861,6 +924,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1720277753890941773, guid: 2ab87fca23454304ab68c6cfc22ac38f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 871579981}
+    - targetCorrespondingSourceObject: {fileID: 1720277753890941773, guid: 2ab87fca23454304ab68c6cfc22ac38f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 871579985}
   m_SourcePrefab: {fileID: 100100000, guid: 2ab87fca23454304ab68c6cfc22ac38f, type: 3}
 --- !u!1001 &4192006763766506663
 PrefabInstance:
@@ -870,6 +936,58 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1849304951}
     m_Modifications:
+    - target: {fileID: 482712146233676533, guid: 93419ca99a6de3544bf11e2568ed399c, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 482712146233676533, guid: 93419ca99a6de3544bf11e2568ed399c, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 482712146233676533, guid: 93419ca99a6de3544bf11e2568ed399c, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 482712146233676533, guid: 93419ca99a6de3544bf11e2568ed399c, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 587598460}
+    - target: {fileID: 482712146233676533, guid: 93419ca99a6de3544bf11e2568ed399c, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 587598460}
+    - target: {fileID: 482712146233676533, guid: 93419ca99a6de3544bf11e2568ed399c, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 482712146233676533, guid: 93419ca99a6de3544bf11e2568ed399c, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 482712146233676533, guid: 93419ca99a6de3544bf11e2568ed399c, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: StartPreparationPhase
+      objectReference: {fileID: 0}
+    - target: {fileID: 482712146233676533, guid: 93419ca99a6de3544bf11e2568ed399c, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: StartPreparationPhase
+      objectReference: {fileID: 0}
+    - target: {fileID: 482712146233676533, guid: 93419ca99a6de3544bf11e2568ed399c, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: BowlingBattleGameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 482712146233676533, guid: 93419ca99a6de3544bf11e2568ed399c, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: BowlingBattleGameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 482712146233676533, guid: 93419ca99a6de3544bf11e2568ed399c, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 482712146233676533, guid: 93419ca99a6de3544bf11e2568ed399c, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2363592282825170297, guid: 93419ca99a6de3544bf11e2568ed399c, type: 3}
       propertyPath: m_Name
       value: Game Manager
