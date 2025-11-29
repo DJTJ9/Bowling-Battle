@@ -28,4 +28,6 @@ public class BallSpawner : MonoBehaviour, IDependencyProvider
         CurrentBallInstance = Instantiate(ballSO.ball, transform.position, transform.rotation);
         CurrentBallSO = ballSO;
     }
+    
+    public void RespwanBall() => SpawnBall(CurrentBallSO);
 }
