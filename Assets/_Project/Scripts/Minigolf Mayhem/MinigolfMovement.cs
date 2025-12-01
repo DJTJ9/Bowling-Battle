@@ -55,9 +55,9 @@ public class MinigolfMovement : MonoBehaviour
         lookInputAction = playerInput.actions["Look"];
     }
 
-    private void OnShootInput(InputAction.CallbackContext context)
+    private void OnShootInput(InputAction.CallbackContext _context)
     {
-        if (context.phase == InputActionPhase.Started)
+        if (_context.phase == InputActionPhase.Started)
         {
             Shoot();
         }

@@ -25,13 +25,13 @@ public class BallSpawner : MonoBehaviour, IDependencyProvider
         CurrentBallSO = ballCollectionSO.BowlingBalls[BallType.Basketball];
     }
 
-    public void SpawnBall(BowlingBallSO ballSO)
+    public void SpawnBall(BowlingBallSO _ballSO)
     {
         if (CurrentBallInstance != null)
             Destroy(CurrentBallInstance);
         
-        CurrentBallInstance = Instantiate(ballSO.ball, transform.position, transform.rotation);
-        CurrentBallSO = ballSO;
+        CurrentBallInstance = Instantiate(_ballSO.ball, transform.position, transform.rotation);
+        CurrentBallSO = _ballSO;
     }
     
     public void RespawnBall() => SpawnBall(CurrentBallSO);

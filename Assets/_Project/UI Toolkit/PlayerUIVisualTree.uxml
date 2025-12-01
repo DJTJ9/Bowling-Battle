@@ -18,7 +18,7 @@
                 <ui:Button text="FOOTBALL (5x)" name="ball-selector-football__button" class="button" />
             </ui:ScrollView>
         </ui:VisualElement>
-        <ui:VisualElement name="endscreen-menu__container" style="flex-grow: 0; width: 70%; display: none; margin-right: auto; margin-left: auto; background-image: url(&quot;project://database/Assets/_Project/Art/GUIPackCartoon/Demo/Sprites/Buttons/Rectangles/Green.png?fileID=21300000&amp;guid=f2f4580479a744a0688440b82c21ddd5&amp;type=3#Green&quot;);">
+        <ui:VisualElement name="end-screen-menu__container" style="flex-grow: 0; width: 70%; display: none; margin-right: auto; margin-left: auto; background-image: url(&quot;project://database/Assets/_Project/Art/GUIPackCartoon/Demo/Sprites/Buttons/Rectangles/Green.png?fileID=21300000&amp;guid=f2f4580479a744a0688440b82c21ddd5&amp;type=3#Green&quot;);">
             <ui:Label text="END SCORE:" name="endscreen-header__label" class="header" style="width: auto;" />
             <ui:Label text="Label" name="endscreen-score__label" data-source="project://database/Assets/_Project/Scriptable%20Objects/Scriptable%20Values/Game%20Score.asset?fileID=11400000&amp;guid=22d2f8786f167b249ba84b42cd580d6a&amp;type=2#Game Score" class="header">
                 <Bindings>

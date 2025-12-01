@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour {
     [Header("Movement")]
     public RigidbodyMovement RigidbodyMovement;
-    public CameraRotator CameraRotator;
+    // public CameraRotator CameraRotator;
 
     // [Header("Interact")]
     // public GrabbableObject GrabbableObject;
@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour {
     private InputAction moveInputAction;
     private InputAction jumpInputAction;
     private InputAction lookInputAction;
-    // private InputAction grabInputAction;
+    private InputAction shootInputAction;
     // private InputAction dropInputAction;
 
     // private GrabbableObject objectGrabbable;
@@ -45,20 +45,20 @@ public class PlayerController : MonoBehaviour {
         var moveDirection = GetMoveDirectionFromInput();
         RigidbodyMovement.Move(moveDirection);
 
-        if (Cursor.lockState == CursorLockMode.Locked) {
-            var rotation = GetRotationFromInput();
-            RigidbodyMovement.RotateHorizontal(rotation.x * LookSensitivity);
-        }
+        // if (Cursor.lockState == CursorLockMode.Locked) {
+        //     var rotation = GetRotationFromInput();
+        //     RigidbodyMovement.RotateHorizontal(rotation.x * LookSensitivity);
+        // }
     }
 
     /// <summary>
     /// Rotates camera vertically if cursor lock mode is locked.
     /// </summary>
     private void LateUpdate() {
-        if (Cursor.lockState == CursorLockMode.Locked) {
-            if (CameraRotator != null)
-                UpdateCamera();
-        }
+        // if (Cursor.lockState == CursorLockMode.Locked) {
+        //     if (CameraRotator != null)
+        //         UpdateCamera();
+        // }
     }
 
     /// <summary>
@@ -66,8 +66,8 @@ public class PlayerController : MonoBehaviour {
     /// Rotates camera in the direction of the rotation input
     /// </summary>
     private void UpdateCamera() {
-        var rotation = GetRotationFromInput();
-        CameraRotator.Rotate(rotation.y);
+        // var rotation = GetRotationFromInput();
+        // CameraRotator.Rotate(rotation.y);
     }
 
     /// <summary>
@@ -81,6 +81,15 @@ public class PlayerController : MonoBehaviour {
         jumpInputAction.started += OnJumpInput;
 
         lookInputAction = PlayerInput.actions["Look"];
+
+        shootInputAction = PlayerInput.actions["Shoot"];
+        shootInputAction.started += OnShootInput;
+    }
+
+    private void OnShootInput(InputAction.CallbackContext _context)
+    {
+        if (_context.phase == InputActionPhase.Started)
+            RigidbodyMovement.Shoot();
     }
 
     private void OnJumpInput(InputAction.CallbackContext _context) {
@@ -104,21 +113,4 @@ public class PlayerController : MonoBehaviour {
     private Vector2 GetRotationFromInput() {
         return lookInputAction.ReadValue<Vector2>();
     }
-
-    // private void OnGrabInput(InputAction.CallbackContext _context) {
-    //     if (_context.phase == InputActionPhase.Started)
-    //         if (GrabbableObject == null) {
-    //             if (Physics.Raycast(MainCameraTransform.position, MainCameraTransform.forward, out RaycastHit raycastHit, pickUpDistance)) {
-    //                 if (raycastHit.transform.TryGetComponent(out GrabbableObject grabbableObject)) {
-    //                     grabbableObject.Grab(ObjectGrabPoint);
-    //                     GrabbableObject = grabbableObject;
-    //                 }
-    //             }
-    //         }
-    // }
-    //
-    // private void OnDropInput(InputAction.CallbackContext _context) {
-    //     GrabbableObject.Drop();
-    //     GrabbableObject = null;
-    // }
 }

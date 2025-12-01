@@ -34,12 +34,12 @@ public class MainMenuEvents : MonoBehaviour
         }
     }
 
-    private void OnPlayGameClick(ClickEvent evt)
+    private void OnPlayGameClick(ClickEvent _evt)
     {
         Debug.Log("Play Game Button Clicked");
     }
 
-    private void OnAllButtonsClicked(ClickEvent evt)
+    private void OnAllButtonsClicked(ClickEvent _evt)
     {
         Debug.Log("One Of The Menu Buttons Clicked");
     }

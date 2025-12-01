@@ -73,9 +73,9 @@ public class BallMovement : MonoBehaviour
         moveInput = moveInputAction.ReadValue<Vector2>();
     }
 
-    public void OnJump(InputAction.CallbackContext context)
+    public void OnJump(InputAction.CallbackContext _context)
     {
-        if (context.phase == InputActionPhase.Started)
+        if (_context.phase == InputActionPhase.Started)
         {
             if (controller == null) return;
             controller.enabled = false;

@@ -1,14 +1,15 @@
 using UnityEngine;
 
-[RequireComponent (typeof(Rigidbody), typeof(GroundChecker))]
+[RequireComponent (typeof(GroundChecker))]
 public class RigidbodyMovement : MonoBehaviour
 {
     [Header("Settings")]
-    public float Speed;
-    public float MaxSpeed;
-    public float JumpPower;
-    public float JumpSpeedModifier = 1;
-    public float FallSpeedModifier = 1;
+    [SerializeField] private float speed;
+    [SerializeField] private float maxSpeed;
+    [SerializeField] private float shootForce;
+    [SerializeField] private float jumpPower;
+    [SerializeField] private float jumpSpeedModifier = 1;
+    [SerializeField] private float fallSpeedModifier = 1;
 
     private new Transform transform;
     private new Rigidbody rigidbody;
@@ -39,8 +40,36 @@ public class RigidbodyMovement : MonoBehaviour
 
     public void Jump()
     {
-        if (groundChecker.isGrounded == true)
-            rigidbody.AddForce(Vector3.up * JumpPower, ForceMode.Impulse);
+        if (groundChecker.isGrounded)
+            rigidbody.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
+    }
+    
+    public void Shoot()
+    {
+        Camera cam = Camera.main;
+
+        // Ray aus Bildschirmmitte
+        Ray ray = cam.ScreenPointToRay(
+            new Vector3(Screen.width / 2f, Screen.height / 2f, 0f)
+        );
+
+        Vector3 targetPoint;
+
+        // Raycast um Zielpunkt zu finden
+        if (Physics.Raycast(ray, out RaycastHit hit, 500f))
+        {
+            targetPoint = hit.point;
+        }
+        else
+        {
+            targetPoint = ray.GetPoint(500f);
+        }
+
+        // Richtung vom Rigidbody zum Ziel
+        Vector3 direction = (targetPoint - rigidbody.transform.position).normalized;
+
+        // AddForce
+        rigidbody.AddForce(direction * shootForce, ForceMode.Impulse);
     }
 
     /// <summary>
@@ -53,13 +82,13 @@ public class RigidbodyMovement : MonoBehaviour
     {
         Vector3 currentVelocity = rigidbody.linearVelocity;
         Vector3 targetVelocity = new Vector3(moveDirection.x, 0f , moveDirection.z);
-        targetVelocity *= Speed;
+        targetVelocity *= speed;
 
         targetVelocity = transform.TransformDirection(targetVelocity);
 
         Vector3 velocityChange = targetVelocity - currentVelocity;
         velocityChange = new Vector3(velocityChange.x, 0f, velocityChange.z);
-        velocityChange = Vector3.ClampMagnitude(velocityChange, MaxSpeed);
+        velocityChange = Vector3.ClampMagnitude(velocityChange, maxSpeed);
 
         rigidbody.AddForce(velocityChange, ForceMode.VelocityChange);
     }
@@ -81,9 +110,9 @@ public class RigidbodyMovement : MonoBehaviour
     private void UpdateVerticalMovement()
     {
         if (rigidbody.linearVelocity.y < 0)
-            rigidbody.linearVelocity += Vector3.up * Physics.gravity.y * (FallSpeedModifier - 1) * Time.fixedDeltaTime;
+            rigidbody.linearVelocity += Vector3.up * (Physics.gravity.y * (fallSpeedModifier - 1) * Time.fixedDeltaTime);
 
         if (rigidbody.linearVelocity.y > 0)
-            rigidbody.linearVelocity += Vector3.up * Physics.gravity.y * JumpSpeedModifier * Time.fixedDeltaTime;
+            rigidbody.linearVelocity += Vector3.up * (Physics.gravity.y * jumpSpeedModifier * Time.fixedDeltaTime);
     }
 }

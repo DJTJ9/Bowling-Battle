@@ -11,7 +11,7 @@ public class PlayerUIEvents : MonoBehaviour
     private VisualElement leftPlayerUI;
     private VisualElement middlePlayerUI;
     private VisualElement rightPlayerUI;
-    private VisualElement endscreenUI;
+    private VisualElement endScreenUI;
     
     private Button basketBallButton;
     private Button baseBallButton;
@@ -37,25 +37,25 @@ public class PlayerUIEvents : MonoBehaviour
         leftPlayerUI = document.rootVisualElement.Q("player-ui-left__container");
         middlePlayerUI = document.rootVisualElement.Q("player-ui-middle__container");
         rightPlayerUI = document.rootVisualElement.Q("player-ui-right__container");
-        endscreenUI = document.rootVisualElement.Q("endscreen-menu__container");
+        endScreenUI = document.rootVisualElement.Q("end-screen-menu__container");
     }
 
     private void BindButtonsWithEvents()
     {
         baseBallButton = document.rootVisualElement.Q("ball-selector-baseball__button") as Button;
         baseBallButton?.RegisterCallback<ClickEvent>
-            (evt => SpawnBall(ballCollectionSO.BowlingBalls[BallType.Baseball]));
+            (_evt => SpawnBall(ballCollectionSO.BowlingBalls[BallType.Baseball]));
         basketBallButton = document.rootVisualElement.Q("ball-selector-basketball__button") as Button;
         basketBallButton?.RegisterCallback<ClickEvent>
-            (evt => SpawnBall(ballCollectionSO.BowlingBalls[BallType.Basketball]));
+            (_evt => SpawnBall(ballCollectionSO.BowlingBalls[BallType.Basketball]));
         footBallButton = document.rootVisualElement.Q("ball-selector-football__button") as Button;
         footBallButton?.RegisterCallback<ClickEvent>
-            (evt => SpawnBall(ballCollectionSO.BowlingBalls[BallType.Football]));
+            (_evt => SpawnBall(ballCollectionSO.BowlingBalls[BallType.Football]));
     }
 
-    private void SpawnBall(BowlingBallSO ballSO)
+    private void SpawnBall(BowlingBallSO _ballSO)
     {
-        ballSpawner.SpawnBall(ballSO);
+        ballSpawner.SpawnBall(_ballSO);
     }
     
     public void ShowLeftPlayerUI()
@@ -90,11 +90,11 @@ public class PlayerUIEvents : MonoBehaviour
     
     public void ShowEndscreenUI()
     {
-        endscreenUI.style.display = DisplayStyle.Flex;
+        endScreenUI.style.display = DisplayStyle.Flex;
     }
     
     public void HideEndscreenUI()
     {
-        endscreenUI.style.display = DisplayStyle.None;
+        endScreenUI.style.display = DisplayStyle.None;
     }
 }
