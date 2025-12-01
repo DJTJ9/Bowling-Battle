@@ -1,3 +1,23 @@
+.player-ui-main-container {
+    flex-direction: row;
+}
+
+.player-ui-left {
+    flex-direction: row;
+    width: 15%;
+}
+
+.player-ui-right {
+    width: 15%;
+    flex-grow: 1;
+}
+
+.player-ui-middle {
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .score-label {
     font-size: 30px;
     -unity-font-definition: url("project://database/Assets/_Project/Art/GUIPackCartoon/Demo/Fonts/LilitaOne%20-%20Regular.ttf?fileID=12800000&guid=7f47410f368bf40f4b4be4929906c9c9&type=3#LilitaOne - Regular");

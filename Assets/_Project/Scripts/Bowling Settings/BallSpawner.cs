@@ -14,6 +14,11 @@ public class BallSpawner : MonoBehaviour, IDependencyProvider
     
     private void Awake()
     {
+        CreateAndSetFirstBallInstance();
+    }
+
+    private void CreateAndSetFirstBallInstance()
+    {
         CurrentBallInstance = Instantiate(ballCollectionSO.BowlingBalls[BallType.Basketball].ball,
             transform.position, transform.rotation);
 
@@ -29,5 +34,5 @@ public class BallSpawner : MonoBehaviour, IDependencyProvider
         CurrentBallSO = ballSO;
     }
     
-    public void RespwanBall() => SpawnBall(CurrentBallSO);
+    public void RespawnBall() => SpawnBall(CurrentBallSO);
 }

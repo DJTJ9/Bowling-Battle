@@ -49,7 +49,6 @@ public class PlayerController : MonoBehaviour {
             var rotation = GetRotationFromInput();
             RigidbodyMovement.RotateHorizontal(rotation.x * LookSensitivity);
         }
-
     }
 
     /// <summary>
@@ -82,12 +81,6 @@ public class PlayerController : MonoBehaviour {
         jumpInputAction.started += OnJumpInput;
 
         lookInputAction = PlayerInput.actions["Look"];
-
-        // grabInputAction = PlayerInput.actions["Grab"];
-        // grabInputAction.started += OnGrabInput;
-        //
-        // dropInputAction = PlayerInput.actions["Drop"];
-        // dropInputAction.started += OnDropInput;
     }
 
     private void OnJumpInput(InputAction.CallbackContext _context) {

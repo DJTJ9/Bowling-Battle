@@ -1,0 +1,10 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/_Project/UI%20Toolkit/PlayerUIStyle.uss?fileID=7433441132597879392&amp;guid=33b62e3f4cca71b459a08bfc04608d26&amp;type=3#PlayerUIStyle" />
+    <ui:VisualElement class="player-ui-main-container" style="flex-grow: 1;">
+        <ui:VisualElement class="player-ui-left" style="flex-grow: 1;" />
+        <ui:VisualElement class="player-ui-middle" style="flex-grow: 1; justify-content: center; align-items: center;">
+            <ui:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Samples/Input%20System/1.15.0/Gamepad%20Mouse%20Cursor/crosshair.png?fileID=21300000&amp;guid=c08500e75c1581d4daacd1a363ff46f6&amp;type=3#crosshair&quot;); width: 70%; height: 100%; -unity-text-align: upper-left; flex-direction: column; background-size: 10% 10%;" />
+        </ui:VisualElement>
+        <ui:VisualElement class="player-ui-right" style="flex-grow: 1;" />
+    </ui:VisualElement>
+</ui:UXML>

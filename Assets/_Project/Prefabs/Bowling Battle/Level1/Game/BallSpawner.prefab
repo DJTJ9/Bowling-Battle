@@ -45,8 +45,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acb94c34c5c44bffac05a57bb192a545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentBallInstance: {fileID: 0}
-  CurrentBallSO: {fileID: 0}
   ballCollectionSO: {fileID: 11400000, guid: 131a9e8b8cdee3d4aa3eae10dc865e3f, type: 2}
 --- !u!114 &1754577548174606857
 MonoBehaviour:
@@ -66,11 +64,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2585314517416034915}
         m_TargetAssemblyTypeName: BallSpawner, Assembly-CSharp
-        m_MethodName: SpawnBall
-        m_Mode: 2
+        m_MethodName: RespawnBall
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 61a8b7ab76e1e6941b6341d806094675, type: 2}
-          m_ObjectArgumentAssemblyTypeName: BowlingBallSO, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
