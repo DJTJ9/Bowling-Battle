@@ -30,13 +30,13 @@ public class MinigolfMovement : MonoBehaviour
         Vector3 targetPoint;
 
         // Raycast um Zielpunkt zu finden
-        if (Physics.Raycast(ray, out RaycastHit hit, 500f))
+        if (Physics.Raycast(ray, out RaycastHit hit, 5f))
         {
             targetPoint = hit.point;
         }
         else
         {
-            targetPoint = ray.GetPoint(500f);
+            targetPoint = ray.GetPoint(5f);
         }
 
         // Richtung vom Rigidbody zum Ziel

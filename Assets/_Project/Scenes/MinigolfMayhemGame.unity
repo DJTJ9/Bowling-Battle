@@ -145,7 +145,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 37317832}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 0f2638e87eadb024bbe2e7c5091a7f5f, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 128
@@ -482,11 +482,11 @@ Transform:
   m_GameObject: {fileID: 302719407}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: 0, y: 2.5, z: -20.5}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 865498933}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &302719409
 MonoBehaviour:
@@ -495,12 +495,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 302719407}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 47e7fb1df3854463b17a4b85a1105de5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballTransform: {fileID: 865498933}
+  target: {fileID: 865498933}
+  offset: {x: 0, y: 2.5, z: 0}
 --- !u!1 &373216284
 GameObject:
   m_ObjectHideFlags: 0
@@ -797,8 +798,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 452471061}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0048871175, y: -0.000000013154323, z: -6.428745e-11, w: 0.9999881}
-  m_LocalPosition: {x: 0, y: 1.718097, z: -27.495241}
+  m_LocalRotation: {x: -0.07984766, y: 0.00000007115689, z: 0.0000000056999108, w: 0.9968071}
+  m_LocalPosition: {x: 0, y: 1.4556321, z: -27.021427}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -827,8 +828,6 @@ MonoBehaviour:
       Input:
         InputAction: {fileID: -5630151704836100654, guid: 1d6e640e716dc4ff6989b73d02023f2b, type: 3}
         Gain: 1
-        LegacyInput: 
-        LegacyGain: 1
         CancelDeltaTime: 0
       InputValue: 0
       Driver:
@@ -840,8 +839,6 @@ MonoBehaviour:
       Input:
         InputAction: {fileID: -5630151704836100654, guid: 1d6e640e716dc4ff6989b73d02023f2b, type: 3}
         Gain: -1
-        LegacyInput: 
-        LegacyGain: 1
         CancelDeltaTime: 0
       InputValue: 0
       Driver:
@@ -853,8 +850,6 @@ MonoBehaviour:
       Input:
         InputAction: {fileID: -423771258819551211, guid: 1d6e640e716dc4ff6989b73d02023f2b, type: 3}
         Gain: -1
-        LegacyInput: 
-        LegacyGain: 1
         CancelDeltaTime: 0
       InputValue: 0
       Driver:
@@ -892,7 +887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Composition:
-    ScreenPosition: {x: 0, y: 0.04629636}
+    ScreenPosition: {x: -0.000000059604645, y: 0.000926435}
     DeadZone:
       Enabled: 0
       Size: {x: 0.2, y: 0.2}
@@ -927,18 +922,18 @@ MonoBehaviour:
     AngularDampingMode: 0
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
-  OrbitStyle: 0
+  OrbitStyle: 1
   Radius: 5
   Orbits:
     Top:
-      Radius: 2
-      Height: 5
+      Radius: 6.68
+      Height: 1.71
     Center:
-      Radius: 4
-      Height: 2.25
+      Radius: 6.81
+      Height: 0.3
     Bottom:
-      Radius: 7
-      Height: 0.1
+      Radius: 5.74
+      Height: -2.5
     SplineCurvature: 0.5
   RecenteringTarget: 2
   HorizontalAxis:
@@ -952,7 +947,7 @@ MonoBehaviour:
       Time: 2
     Restrictions: 0
   VerticalAxis:
-    Value: 2.5
+    Value: -5
     Center: 2.5
     Range: {x: -15, y: 20}
     Wrap: 0
@@ -1051,8 +1046,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.5, z: -22.5}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 302719408}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &865498934
@@ -1137,9 +1131,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 865498932}
   serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Mass: 100
+  m_Drag: 0.5
+  m_AngularDrag: 0.5
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1217,9 +1211,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52e85b00c50e60049b0185cdfd2cbeff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  maxSpeed: 2
-  shootForce: 5
+  speed: 2
+  maxSpeed: 4
+  shootForce: 3500
   jumpPower: 1
   jumpSpeedModifier: 1
   fallSpeedModifier: 1
@@ -1254,8 +1248,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08eb128d314e2114fa7e0012fdbb3974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RigidbodyMovement: {fileID: 0}
-  PlayerInput: {fileID: 0}
+  RigidbodyMovement: {fileID: 865498940}
+  PlayerInput: {fileID: 865498938}
   LookSensitivity: 2
 --- !u!1 &1492147478
 GameObject:
@@ -1344,8 +1338,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1492147478}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0048871175, y: -0.000000013154323, z: -6.4287485e-11, w: 0.9999881}
-  m_LocalPosition: {x: 0, y: 1.718097, z: -27.495241}
+  m_LocalRotation: {x: -0.07984768, y: 0.0000000711569, z: 0.0000000056999117, w: 0.9968071}
+  m_LocalPosition: {x: 0, y: 1.4556321, z: -27.021427}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1798,5 +1792,6 @@ SceneRoots:
   - {fileID: 192825477}
   - {fileID: 1803616221}
   - {fileID: 865498933}
+  - {fileID: 302719408}
   - {fileID: 452471062}
   - {fileID: 373216286}

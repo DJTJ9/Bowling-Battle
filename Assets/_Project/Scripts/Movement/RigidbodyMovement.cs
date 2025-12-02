@@ -14,6 +14,7 @@ public class RigidbodyMovement : MonoBehaviour
     private new Transform transform;
     private new Rigidbody rigidbody;
     private GroundChecker groundChecker;
+    private Camera cam;
 
     private Vector3 moveDirection;
 
@@ -22,12 +23,13 @@ public class RigidbodyMovement : MonoBehaviour
         transform = GetComponent<Transform>();
         rigidbody = GetComponent<Rigidbody>();
         groundChecker = GetComponent<GroundChecker>();
+        cam = Camera.main;
     }
 
     private void FixedUpdate()
     {
-        UpdateHorizontalMovement();
-        UpdateVerticalMovement();
+        // UpdateHorizontalMovement();
+        // UpdateVerticalMovement();
     }
 
     /// <summary>
@@ -46,29 +48,14 @@ public class RigidbodyMovement : MonoBehaviour
     
     public void Shoot()
     {
-        Camera cam = Camera.main;
-
-        // Ray aus Bildschirmmitte
         Ray ray = cam.ScreenPointToRay(
             new Vector3(Screen.width / 2f, Screen.height / 2f, 0f)
         );
 
-        Vector3 targetPoint;
+        Vector3 targetPoint = ray.GetPoint(500f);
 
-        // Raycast um Zielpunkt zu finden
-        if (Physics.Raycast(ray, out RaycastHit hit, 500f))
-        {
-            targetPoint = hit.point;
-        }
-        else
-        {
-            targetPoint = ray.GetPoint(500f);
-        }
-
-        // Richtung vom Rigidbody zum Ziel
         Vector3 direction = (targetPoint - rigidbody.transform.position).normalized;
 
-        // AddForce
         rigidbody.AddForce(direction * shootForce, ForceMode.Impulse);
     }
 
