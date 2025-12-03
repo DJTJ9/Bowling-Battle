@@ -5,13 +5,7 @@ public class PlayerController : MonoBehaviour {
     [Header("Movement")]
     public RigidbodyMovement RigidbodyMovement;
     // public CameraRotator CameraRotator;
-
-    // [Header("Interact")]
-    // public GrabbableObject GrabbableObject;
-    // public Transform MainCameraTransform;
-    // public Transform ObjectGrabPoint;
-    // public LayerMask PickUpLayer;
-
+    
     [Header("Input")]
     public PlayerInput PlayerInput;
 
@@ -22,11 +16,6 @@ public class PlayerController : MonoBehaviour {
     private InputAction jumpInputAction;
     private InputAction lookInputAction;
     private InputAction shootInputAction;
-    // private InputAction dropInputAction;
-
-    // private GrabbableObject objectGrabbable;
-    // private PlayerInteraction playerInteraction;
-    // private float pickUpDistance = 2f;
 
     private void Awake() {
         MapInputActions();
@@ -45,10 +34,10 @@ public class PlayerController : MonoBehaviour {
         var moveDirection = GetMoveDirectionFromInput();
         RigidbodyMovement.Move(moveDirection);
 
-        // if (Cursor.lockState == CursorLockMode.Locked) {
-        //     var rotation = GetRotationFromInput();
-        //     RigidbodyMovement.RotateHorizontal(rotation.x * LookSensitivity);
-        // }
+        if (Cursor.lockState == CursorLockMode.Locked) {
+            var rotation = GetRotationFromInput();
+            RigidbodyMovement.RotateHorizontal(rotation.x * LookSensitivity);
+        }
     }
 
     /// <summary>

@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 2445237044291195867}
   - component: {fileID: 5488142940482084349}
   - component: {fileID: 1506032368334937529}
+  - component: {fileID: 8768914257492402728}
   m_Layer: 0
   m_Name: Bowling Pin
   m_TagString: Untagged
@@ -55,6 +56,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8abc3262695946d9bd1d51fe9a89749e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFallenDotProductThreshold: 0.7
   scoreSO: {fileID: 11400000, guid: 22d2f8786f167b249ba84b42cd580d6a, type: 2}
 --- !u!114 &6199742015218426433
 MonoBehaviour:
@@ -313,3 +315,24 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: -1
   m_Mesh: {fileID: 4300000, guid: 7cd4331544ddaea409a26f52a264429e, type: 2}
+--- !u!65 &8768914257492402728
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 345230086429198477}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.05, y: 0.01, z: 0.05}
+  m_Center: {x: 0.0000000037252903, y: 0, z: -0.000000007450581}

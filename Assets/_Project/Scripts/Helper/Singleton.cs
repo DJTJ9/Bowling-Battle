@@ -3,8 +3,8 @@
 public class Singleton<T> : MonoBehaviour where T : Component
 {
     protected static T instance;
-    public static bool HasInstance      => instance != null;
-    public static T    TryGetInstance() => HasInstance ? instance : null;
+    public static bool HasInstance => instance != null;
+    public static T TryGetInstance() => HasInstance ? instance : null;
     public static T Current => instance;
 
     public static T Instance

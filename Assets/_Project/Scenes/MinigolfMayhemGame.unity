@@ -799,7 +799,7 @@ Transform:
   m_GameObject: {fileID: 452471061}
   serializedVersion: 2
   m_LocalRotation: {x: -0.07984766, y: 0.00000007115689, z: 0.0000000056999108, w: 0.9968071}
-  m_LocalPosition: {x: 0, y: 1.4556321, z: -27.021427}
+  m_LocalPosition: {x: 0, y: 1.4567472, z: -27.021427}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -927,7 +927,7 @@ MonoBehaviour:
   Orbits:
     Top:
       Radius: 6.68
-      Height: 1.71
+      Height: 1.7
     Center:
       Radius: 6.81
       Height: 0.3
@@ -1211,9 +1211,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52e85b00c50e60049b0185cdfd2cbeff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  maxSpeed: 4
+  speed: 1000
+  maxSpeed: 2000
   shootForce: 3500
+  shootCooldown: 3
   jumpPower: 1
   jumpSpeedModifier: 1
   fallSpeedModifier: 1
@@ -1339,7 +1340,7 @@ Transform:
   m_GameObject: {fileID: 1492147478}
   serializedVersion: 2
   m_LocalRotation: {x: -0.07984768, y: 0.0000000711569, z: 0.0000000056999117, w: 0.9968071}
-  m_LocalPosition: {x: 0, y: 1.4556321, z: -27.021427}
+  m_LocalPosition: {x: 0, y: 1.4567472, z: -27.021427}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

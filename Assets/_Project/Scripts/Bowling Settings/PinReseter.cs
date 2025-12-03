@@ -9,7 +9,7 @@ public class PinReseter : MonoBehaviour
 
     private void Start()
     {
-        startPosition= transform.position;
+        startPosition = transform.position;
         
         rb = GetComponent<Rigidbody>();
     }
@@ -17,6 +17,7 @@ public class PinReseter : MonoBehaviour
     public void ResetPinPosition()
     {
         rb.linearVelocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
 
         transform.position = startPosition;
         transform.rotation = Quaternion.identity;

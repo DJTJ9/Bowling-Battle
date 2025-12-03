@@ -1,0 +1,32 @@
+OVDF v1.0
+GameInitiator, Assembly-CSharp
+
+# mainCamera
+Position: "Scene Objects":0
+
+# mainDirectionalLight
+Position: "Scene Objects":1
+
+# eventSystem
+Position: "Scene Objects":2
+
+# globalVolume
+Position: "Scene Objects":3
+
+# gameManager
+Position: "Game Logic":0
+
+# playerUI
+Position: "Game Logic":1
+
+# bowlingPins
+Position: "Game Logic":2
+
+# ballSpawner
+Position: "Game Logic":4
+
+# ballMovement
+Position: "Game Logic":3
+
+# injector
+Position: "Game Logic":5

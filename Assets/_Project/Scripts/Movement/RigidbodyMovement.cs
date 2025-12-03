@@ -1,4 +1,5 @@
 using UnityEngine;
+using ImprovedTimers;
 
 [RequireComponent (typeof(GroundChecker))]
 public class RigidbodyMovement : MonoBehaviour
@@ -7,6 +8,7 @@ public class RigidbodyMovement : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float maxSpeed;
     [SerializeField] private float shootForce;
+    [SerializeField] private float shootCooldown;
     [SerializeField] private float jumpPower;
     [SerializeField] private float jumpSpeedModifier = 1;
     [SerializeField] private float fallSpeedModifier = 1;
@@ -15,8 +17,10 @@ public class RigidbodyMovement : MonoBehaviour
     private new Rigidbody rigidbody;
     private GroundChecker groundChecker;
     private Camera cam;
+    private CountdownTimer shootCooldownTimer;
 
     private Vector3 moveDirection;
+    private bool canShoot = true;
 
     private void Awake()
     {
@@ -24,11 +28,14 @@ public class RigidbodyMovement : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
         groundChecker = GetComponent<GroundChecker>();
         cam = Camera.main;
+        
+        shootCooldownTimer = new CountdownTimer(shootCooldown);
+        shootCooldownTimer.OnTimerStop += EnableShooting;
     }
-
+    
     private void FixedUpdate()
     {
-        // UpdateHorizontalMovement();
+        UpdateHorizontalMovement();
         // UpdateVerticalMovement();
     }
 
@@ -48,6 +55,8 @@ public class RigidbodyMovement : MonoBehaviour
     
     public void Shoot()
     {
+        if (!canShoot) return;
+        
         Ray ray = cam.ScreenPointToRay(
             new Vector3(Screen.width / 2f, Screen.height / 2f, 0f)
         );
@@ -57,6 +66,10 @@ public class RigidbodyMovement : MonoBehaviour
         Vector3 direction = (targetPoint - rigidbody.transform.position).normalized;
 
         rigidbody.AddForce(direction * shootForce, ForceMode.Impulse);
+        
+        shootCooldownTimer.Reset();
+        shootCooldownTimer.Start();
+        canShoot = false;
     }
 
     /// <summary>
@@ -77,7 +90,7 @@ public class RigidbodyMovement : MonoBehaviour
         velocityChange = new Vector3(velocityChange.x, 0f, velocityChange.z);
         velocityChange = Vector3.ClampMagnitude(velocityChange, maxSpeed);
 
-        rigidbody.AddForce(velocityChange, ForceMode.VelocityChange);
+        rigidbody.AddForce(velocityChange, ForceMode.Force);
     }
 
     /// <summary>
@@ -101,5 +114,10 @@ public class RigidbodyMovement : MonoBehaviour
 
         if (rigidbody.linearVelocity.y > 0)
             rigidbody.linearVelocity += Vector3.up * (Physics.gravity.y * jumpSpeedModifier * Time.fixedDeltaTime);
+    }
+    
+    private void EnableShooting()
+    {
+        canShoot = true;
     }
 }

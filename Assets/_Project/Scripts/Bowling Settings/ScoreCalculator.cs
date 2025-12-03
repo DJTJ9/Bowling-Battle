@@ -1,7 +1,5 @@
-﻿using System;
-using DependencyInjection;
+﻿using DependencyInjection;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class ScoreCalculator : MonoBehaviour
 {
@@ -12,8 +10,8 @@ public class ScoreCalculator : MonoBehaviour
 
     public void ScoreChecker() 
     {
-        float dotProduct = Vector3.Dot(transform.up, Vector3.up);
-        bool isFallen = dotProduct < isFallenDotProductThreshold;
+        var dotProduct = Vector3.Dot(transform.up, Vector3.up);
+        var isFallen = dotProduct < isFallenDotProductThreshold;
         
         if (isFallen)
         {
