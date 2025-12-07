@@ -1,0 +1,8 @@
+OVDF v1.0
+RigidbodyMovement, Assembly-CSharp
+
+# pushCooldown
+Position: "Push Settings":1
+
+# shootCooldown
+Position: "Shoot Settings":1

@@ -3,14 +3,14 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour {
     [Header("Movement")]
-    public RigidbodyMovement RigidbodyMovement;
+    private RigidbodyMovement rigidbodyMovement;
     // public CameraRotator CameraRotator;
     
     [Header("Input")]
-    public PlayerInput PlayerInput;
+    private PlayerInput playerInput;
 
-    [Header("Settings")]
-    public float LookSensitivity = 2;
+    // [Header("Settings")]
+    // [SerializeField] private float lookSensitivity = 2;
 
     private InputAction moveInputAction;
     private InputAction jumpInputAction;
@@ -18,6 +18,9 @@ public class PlayerController : MonoBehaviour {
     private InputAction shootInputAction;
 
     private void Awake() {
+        rigidbodyMovement = GetComponent<RigidbodyMovement>();
+        playerInput = GetComponent<PlayerInput>();
+        
         MapInputActions();
     }
 
@@ -31,13 +34,13 @@ public class PlayerController : MonoBehaviour {
         if (Keyboard.current.escapeKey.wasPressedThisFrame) Cursor.lockState = CursorLockMode.None;
 
 
-        var moveDirection = GetMoveDirectionFromInput();
-        RigidbodyMovement.Move(moveDirection);
-
-        if (Cursor.lockState == CursorLockMode.Locked) {
-            var rotation = GetRotationFromInput();
-            RigidbodyMovement.RotateHorizontal(rotation.x * LookSensitivity);
-        }
+        // var moveDirection = GetMoveDirectionFromInput();
+        // RigidbodyMovement.Move(moveDirection);
+        
+        // if (Cursor.lockState == CursorLockMode.Locked) {
+        //     var rotation = GetRotationFromInput();
+        //     rigidbodyMovement.RotateHorizontal(rotation.x * lookSensitivity);
+        // }
     }
 
     /// <summary>
@@ -64,26 +67,33 @@ public class PlayerController : MonoBehaviour {
     /// Subcribes methods to their matching input actions
     /// </summary>
     private void MapInputActions() {
-        moveInputAction = PlayerInput.actions["Move"];
+        moveInputAction = playerInput.actions["Move"];
+        moveInputAction.started += OnMoveInput;
 
-        jumpInputAction = PlayerInput.actions["Jump"];
+        jumpInputAction = playerInput.actions["Jump"];
         jumpInputAction.started += OnJumpInput;
 
-        lookInputAction = PlayerInput.actions["Look"];
+        lookInputAction = playerInput.actions["Look"];
 
-        shootInputAction = PlayerInput.actions["Shoot"];
+        shootInputAction = playerInput.actions["Shoot"];
         shootInputAction.started += OnShootInput;
     }
 
+    private void OnMoveInput(InputAction.CallbackContext _context)
+    {
+        if (_context.phase == InputActionPhase.Started)
+            rigidbodyMovement.Move(GetMoveDirectionFromInput());
+    }
+    
     private void OnShootInput(InputAction.CallbackContext _context)
     {
         if (_context.phase == InputActionPhase.Started)
-            RigidbodyMovement.Shoot();
+            rigidbodyMovement.Shoot();
     }
 
     private void OnJumpInput(InputAction.CallbackContext _context) {
         if (_context.phase == InputActionPhase.Started)
-            RigidbodyMovement.Jump();
+            rigidbodyMovement.Jump();
     }
 
     /// <summary>

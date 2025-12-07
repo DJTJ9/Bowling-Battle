@@ -4,12 +4,12 @@ public class GroundChecker : MonoBehaviour {
     public bool isActive = true;
 
     [Header("Settings")]
-    public LayerMask GroundCheckLayerMask;
-    public Vector3 GroundCheckPosition;
-    public Vector3 GroundCheckSize;
+    [SerializeField] private LayerMask groundCheckLayerMask;
+    [SerializeField] private Vector3 groundCheckPosition;
+    [SerializeField] private Vector3 groundCheckSize;
 
     [field: SerializeField]
-    public bool isGrounded { get; private set; }
+    public bool IsGrounded { get; private set; }
 
     private new Transform transform;
 
@@ -18,17 +18,17 @@ public class GroundChecker : MonoBehaviour {
     }
 
     private void Update() {
-        if (isActive == true)
+        if (isActive)
             CheckForGround();
     }
 
     private void CheckForGround() {
-        isGrounded = Physics.OverlapBox(transform.position + GroundCheckPosition, GroundCheckSize / 2, Quaternion.identity, GroundCheckLayerMask).Length > 0;
+        IsGrounded = Physics.OverlapBox(transform.position + groundCheckPosition, groundCheckSize / 2, Quaternion.identity, groundCheckLayerMask).Length > 0;
     }
 
     private void OnDrawGizmosSelected() {
-        this.transform = GetComponent<Transform>();
+        transform = GetComponent<Transform>();
 
-        Gizmos.DrawCube(transform.position + GroundCheckPosition, GroundCheckSize);
+        Gizmos.DrawCube(transform.position + groundCheckPosition, groundCheckSize);
     }
 }
