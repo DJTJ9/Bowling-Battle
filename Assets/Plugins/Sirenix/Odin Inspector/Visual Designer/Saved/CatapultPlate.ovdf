@@ -1,0 +1,16 @@
+OVDF v1.0
+CatapultPlate, Assembly-CSharp
+
+# downwardRotationTime
+Position: "Settings":1
++ [Sirenix.OdinInspector.LabelWidthAttribute]
+	Width = 200
+
+# pauseTimeBetweenRotations
+Position: "Settings":2
++ [Sirenix.OdinInspector.LabelWidthAttribute]
+	Width = 200
+
+# upwardRotationTime
++ [Sirenix.OdinInspector.LabelWidthAttribute]
+	Width = 200
