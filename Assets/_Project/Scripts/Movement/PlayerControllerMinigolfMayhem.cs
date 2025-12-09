@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerControllerMinigolfMayhem : MonoBehaviour {
     [Header("Movement")]
     private RigidbodyMovement rigidbodyMovement;
     // public CameraRotator CameraRotator;
@@ -30,9 +30,8 @@ public class PlayerController : MonoBehaviour {
     /// Rotates the rigidbody horizontally if cursor lock mode is locked.
     /// </summary>
     private void Update() {
-        if (Mouse.current.leftButton.wasPressedThisFrame) Cursor.lockState = CursorLockMode.Locked;
+        if (Mouse.current.rightButton.wasPressedThisFrame) Cursor.lockState = CursorLockMode.Locked;
         if (Keyboard.current.escapeKey.wasPressedThisFrame) Cursor.lockState = CursorLockMode.None;
-
 
         // var moveDirection = GetMoveDirectionFromInput();
         // RigidbodyMovement.Move(moveDirection);
@@ -43,15 +42,15 @@ public class PlayerController : MonoBehaviour {
         // }
     }
 
-    /// <summary>
-    /// Rotates camera vertically if cursor lock mode is locked.
-    /// </summary>
-    private void LateUpdate() {
-        // if (Cursor.lockState == CursorLockMode.Locked) {
-        //     if (CameraRotator != null)
-        //         UpdateCamera();
-        // }
-    }
+    // /// <summary>
+    // /// Rotates camera vertically if cursor lock mode is locked.
+    // /// </summary>
+    // private void LateUpdate() {
+    //     if (Cursor.lockState == CursorLockMode.Locked) {
+    //         if (CameraRotator != null)
+    //             UpdateCamera();
+    //     }
+    // }
 
     /// <summary>
     /// Gets rotation from input

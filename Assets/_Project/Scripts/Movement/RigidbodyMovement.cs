@@ -23,15 +23,15 @@ public class RigidbodyMovement : MonoBehaviour
     private new Rigidbody rigidbody;
     private GroundChecker groundChecker;
     private Camera cam;
-    
-    private CountdownTimer pushCooldownTimer;
-    private CountdownTimer shootCooldownTimer;
-    private CountdownTimer jumpCooldownTimer;
 
     private Vector3 moveDirection;
     private bool canMove = true;
     private bool canShoot = true;
     private bool canJump = true;
+    
+    private CountdownTimer pushCooldownTimer;
+    private CountdownTimer shootCooldownTimer;
+    private CountdownTimer jumpCooldownTimer;
     
 
     private void Awake()
@@ -67,13 +67,11 @@ public class RigidbodyMovement : MonoBehaviour
         var camFwd = cam.transform.forward;   
         var camRight = cam.transform.right;
 
-        // Nur horizontale Komponenten (XZ) verwenden
         camFwd.y = 0f; camRight.y = 0f;
         camFwd.Normalize(); camRight.Normalize();
 
         var worldDir = camRight * _direction.x + camFwd * _direction.z;
         
-        // if (worldDir.sqrMagnitude > 0.0001f)
         rigidbody.AddForce(worldDir.normalized * pushForce, ForceMode.Impulse);
         
         pushCooldownTimer.Reset();
@@ -83,6 +81,7 @@ public class RigidbodyMovement : MonoBehaviour
 
     public void Jump()
     {
+        if (!canJump) return;
         if (!groundChecker.IsGrounded) return;
         
         rigidbody.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);

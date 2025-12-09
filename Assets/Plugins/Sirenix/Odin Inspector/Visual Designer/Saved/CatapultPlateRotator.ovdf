@@ -1,0 +1,8 @@
+OVDF v1.0
+CatapultPlateRotator, Assembly-CSharp
+
+# downwardRotationTime
+Position: "Settings":1
+
+# pauseTimeBetweenRotations
+Position: "Settings":2

@@ -6,3 +6,6 @@ Position: "Push Settings":1
 
 # shootCooldown
 Position: "Shoot Settings":1
+
+# jumpCooldown
+Position: "Jump Settings":1

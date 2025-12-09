@@ -2,7 +2,7 @@
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class CatapultPlate : MonoBehaviour
+public class CatapultPlateRotator : MonoBehaviour
 {
     [FoldoutGroup("Settings", expanded: true)]
     [SerializeField] private float upwardRotationTime = 0.2f;
@@ -12,7 +12,7 @@ public class CatapultPlate : MonoBehaviour
     {
         Sequence seq = DOTween.Sequence();
 
-        seq.Append(transform.DOLocalRotate(new Vector3(90f, 0f, 0f), upwardRotationTime)  
+        seq.Append(transform.DOLocalRotate(new Vector3(-90f, 0f, 0f), upwardRotationTime)  
                     .SetEase(Ease.OutQuad))
             .AppendInterval(pauseTimeBetweenRotations)                               
             .Append(transform.DOLocalRotate(Vector3.zero, downwardRotationTime) 
