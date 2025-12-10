@@ -507,6 +507,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: BallSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 1754577548174606857, guid: 7f0bedc94043c6240b9fecdc51390ef6, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1754577548174606857, guid: 7f0bedc94043c6240b9fecdc51390ef6, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1754577548174606857, guid: 7f0bedc94043c6240b9fecdc51390ef6, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 159313f668650e440b5647c4d1ae013c, type: 2}
+    - target: {fileID: 1754577548174606857, guid: 7f0bedc94043c6240b9fecdc51390ef6, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1754577548174606857, guid: 7f0bedc94043c6240b9fecdc51390ef6, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Raise
+      objectReference: {fileID: 0}
+    - target: {fileID: 1754577548174606857, guid: 7f0bedc94043c6240b9fecdc51390ef6, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: GameEvent, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1754577548174606857, guid: 7f0bedc94043c6240b9fecdc51390ef6, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3845879009837394343, guid: 7f0bedc94043c6240b9fecdc51390ef6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
