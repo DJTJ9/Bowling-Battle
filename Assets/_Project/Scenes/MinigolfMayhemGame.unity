@@ -657,7 +657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2b6525b6eb545738ecb6ab56d092bf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedBoost: 5
+  speedBoost: 50
 --- !u!4 &211433705
 Transform:
   m_ObjectHideFlags: 0
@@ -2011,7 +2011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2b6525b6eb545738ecb6ab56d092bf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedBoost: 5
+  speedBoost: 50
 --- !u!1 &918291431
 GameObject:
   m_ObjectHideFlags: 0
@@ -3238,7 +3238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2b6525b6eb545738ecb6ab56d092bf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedBoost: 5
+  speedBoost: 50
 --- !u!4 &1562987198
 Transform:
   m_ObjectHideFlags: 0

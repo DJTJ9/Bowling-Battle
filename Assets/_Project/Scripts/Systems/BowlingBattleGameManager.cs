@@ -52,8 +52,6 @@ private void Start()
     private void EndRound()
     {
         HandleRoundEnd();
-        
-        ++roundIndex;
     } 
 
     private void ReleaseBall()
@@ -65,6 +63,8 @@ private void Start()
 
     private void HandleRoundEnd()
     {
+        ++roundIndex;
+        
         if (roundIndex == maxRounds)
         {
             onRoundEnd.Invoke();
